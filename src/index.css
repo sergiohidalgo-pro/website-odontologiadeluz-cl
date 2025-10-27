@@ -15,26 +15,26 @@
   
   /* Sistema de Colores Oficial - Odontología de Luz */
   
-  /* Colores Primarios - Basados en Azul Royal */
-  --primary: #4169E1;              /* Azul Royal - color principal de marca */
-  --primary-light: #6B8EF5;        /* Azul Royal claro */
-  --primary-medium: #5A7FEB;       /* Azul Royal medio */
-  --primary-subtle: #E8EFFE;       /* Azul Royal muy suave - fondos */
-  --primary-dark: #2952CC;         /* Azul Royal oscuro */
+  /* Colores Primarios - Azul Pinealista */
+  --primary: #5B7FE8;              /* Azul pinealista vibrante */
+  --primary-light: #8BA4F3;        /* Azul pinealista claro */
+  --primary-medium: #7391ED;       /* Azul pinealista medio */
+  --primary-subtle: #EEF2FF;       /* Azul pinealista muy suave */
+  --primary-dark: #3D5FCC;         /* Azul pinealista oscuro */
   
-  /* Sistema Dorado Oficial - Basado en Dorado Suave */
+  /* Sistema Dorado Pinealista - Tonos Cálidos Místicos */
   --gold-realistic: linear-gradient(135deg, 
-    #F4C542 0%,     /* Dorado suave de marca */
-    #F7D165 25%,    /* Dorado suave claro */
-    #F4C542 50%,    /* Dorado suave central */
-    #E0B030 75%,    /* Dorado suave profundo */
-    #F7D165 100%    /* Dorado suave final */
+    #F5C842 0%,     /* Dorado místico */
+    #FFD96A 25%,    /* Dorado luminoso */
+    #F5C842 50%,    /* Dorado místico central */
+    #E6B532 75%,    /* Dorado profundo */
+    #FFD96A 100%    /* Dorado luminoso final */
   );
-  --gold-subtle: linear-gradient(135deg, #FDF5E0 0%, #F7D165 50%, #F4C542 100%);
-  --gold-dark: #B8941F;            /* Dorado oscuro AAA compliant */
-  --gold-core: #F4C542;            /* Dorado suave oficial */
-  --gold-light: #F7D165;           /* Dorado suave claro */
-  --gold-subtle-bg: #FFFBF0;       /* Fondo dorado muy suave */
+  --gold-subtle: linear-gradient(135deg, #FFF9E6 0%, #FFD96A 50%, #F5C842 100%);
+  --gold-dark: #B89420;            /* Dorado oscuro místico */
+  --gold-core: #F5C842;            /* Dorado místico central */
+  --gold-light: #FFD96A;           /* Dorado luminoso */
+  --gold-subtle-bg: #FFFCF0;       /* Fondo dorado etéreo */
   
   /* Legacy gold support - now using realistic system */
   --accent: var(--gold-core);
@@ -42,11 +42,11 @@
   --accent-light: var(--gold-light);
   --accent-subtle: var(--gold-subtle-bg);
   
-  /* Rosa Coral de Marca - Acentos Especiales */
-  --accent-vibrant: #FF8FA3;       /* Rosa coral oficial */
-  --accent-vibrant-light: #FFB3C1; /* Rosa coral más claro */
-  --accent-vibrant-dark: #FF6B85;  /* Rosa coral más oscuro */
-  --accent-vibrant-subtle: #FFF0F3; /* Fondo rosa muy suave */
+  /* Rosa Pinealista - Acentos Místicos */
+  --accent-vibrant: #FF91B2;       /* Rosa pinealista luminoso */
+  --accent-vibrant-light: #FFB8D0; /* Rosa pinealista claro */
+  --accent-vibrant-dark: #FF6B9D;  /* Rosa pinealista profundo */
+  --accent-vibrant-subtle: #FFF5F9; /* Fondo rosa etéreo */
   
   /* Sistema Secundario - Basado en Rosa Coral */
   --secondary: var(--accent-vibrant);
@@ -60,11 +60,13 @@
   --gradient-secondary: linear-gradient(135deg, var(--secondary-light) 0%, var(--secondary) 100%);
   --gradient-lavanda: linear-gradient(135deg, var(--primary-subtle) 0%, var(--primary-light) 50%, var(--primary) 100%);
   
-  /* Gradientes Especiales de Marca - Armonizados */
-  --gradient-hero: linear-gradient(135deg, #E8EFFE 0%, #FFFFFF 30%, #FFFBF0 100%);
-  --gradient-luxury: linear-gradient(135deg, #6B8EF5 0%, #F7D165 50%, #FFB3C1 100%);
-  --gradient-warm: linear-gradient(135deg, #FFFBF0 0%, #FFF0F3 100%);
-  --gradient-premium: linear-gradient(135deg, var(--primary) 0%, var(--gold-core) 50%, var(--secondary) 100%);
+  /* Gradientes Pinealistas - Aura Holística Espiritual */
+  --gradient-hero: linear-gradient(135deg, #E8EFFE 0%, #FFFBF0 50%, #FFF0F3 100%);
+  --gradient-luxury: linear-gradient(135deg, #C7DBFF 0%, #FFD96A 50%, #FFB8D0 100%);
+  --gradient-warm: linear-gradient(135deg, #FFFCF0 0%, #FFF5F9 50%, #E8EFFE 100%);
+  --gradient-premium: linear-gradient(135deg, #E8EFFE 0%, #FFFBF0 50%, #FFF0F3 100%);
+  --gradient-problema: linear-gradient(135deg, #C7DBFF 0%, #E8EFFE 50%, #FFB8D0 100%);
+  --gradient-footer: linear-gradient(135deg, #5B7FE8 0%, #2E4CAA 50%, #1E3A8A 100%);
   
   /* Legacy Support */
   --flame-blue-core: var(--primary);
@@ -146,14 +148,14 @@
   --purple-800: #6d28d9;
   --purple-900: #581c87;
   
-  /* Sistema Neutral - Armonizado con Paleta de Marca - WCAG AAA */
-  --neutral-50: #FAFBFF;          /* Blanco con tinte azul muy sutil */
-  --neutral-100: #F5F7FC;         /* Gris muy claro con tinte azul */
-  --neutral-200: #E8ECFA;         /* Gris claro azulado */
-  --neutral-600: #4A5568;         /* Gris medio AAA compliant */
-  --neutral-700: #2D3748;         /* Gris oscuro AAA compliant */
-  --neutral-800: #1A202C;         /* Gris muy oscuro AAA compliant */
-  --neutral-900: #0F1419;         /* Negro azulado para máximo contraste */
+  /* Sistema Neutral - Tonos Pinealistas Azul Vibrante */
+  --neutral-50: #F0F6FF;          /* Blanco con tinte azul pinealista */
+  --neutral-100: #E3EDFF;         /* Azul muy claro pinealista */
+  --neutral-200: #C7DBFF;         /* Azul claro pinealista */
+  --neutral-600: #5B6FCC;         /* Azul medio vibrante */
+  --neutral-700: #2E4CAA;         /* Azul vibrante medio */
+  --neutral-800: #1E3A8A;         /* Azul profundo vibrante */
+  --neutral-900: #142A6E;         /* Azul muy profundo */
   
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
