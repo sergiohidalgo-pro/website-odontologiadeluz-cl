@@ -13,29 +13,27 @@
   --sqrt-3: 1.732;
   --sqrt-5: 2.236;
   
-  /* Premium Color System - Poder, Sabiduría y Amor (Azul, Oro, Rosa) */
+  /* Sistema de Colores Oficial - Odontología de Luz */
   
-  /* Primary Blue - Poder & Confianza - WCAG AAA Compliant */
-  --primary: #1d4ed8;              /* Deep blue for AAA contrast */
-  --primary-light: #2563eb;        /* Medium blue accent */
-  --primary-dark: #1e3a8a;         /* Very deep blue */
-  --primary-subtle: #eff6ff;       /* Ultra light blue background */
+  /* Colores Primarios - Púrpuras/Lavandas de Marca */
+  --primary: #002c82;              /* Azul marino profundo - texto principal AAA */
+  --primary-light: #9987C6;        /* Púrpura grisáceo - elementos medianos */
+  --primary-medium: #BBA3F8;       /* Lavanda medio - acentos */
+  --primary-subtle: #DDBDF4;       /* Lavanda suave - fondos delicados */
   
-  /* Realistic Gold System - Sabiduría & Premium Metallic */
+  /* Sistema Dorado Oficial - Colores de Marca */
   --gold-realistic: linear-gradient(135deg, 
-    #ffd900 0%,     /* Pure gold highlight */
-    #ffcd3c 15%,    /* Bright gold surface */
-    #f4a500 30%,    /* Rich gold mid-tone */
-    #e8940f 50%,    /* Deep gold shadow */
-    #cc7a00 70%,    /* Bronze shadow depth */
-    #ffcd3c 85%,    /* Reflected light */
-    #fff2cc 100%    /* Rim lighting */
+    #cfaf55 0%,     /* Dorado vibrante de marca */
+    #e7d29a 25%,    /* Dorado cremoso de marca */
+    #cfaf55 50%,    /* Dorado vibrante central */
+    #b8941a 75%,    /* Dorado más profundo */
+    #e7d29a 100%    /* Dorado cremoso final */
   );
-  --gold-subtle: linear-gradient(135deg, #fef3c7 0%, #fed7aa 50%, #fbbf24 100%);
-  --gold-dark: #92400e;            /* AAA compliant dark gold */
-  --gold-core: #d97706;            /* Solid gold AAA contrast */
-  --gold-light: #f59e0b;           /* Light gold */
-  --gold-subtle-bg: #fffbeb;       /* Background tint */
+  --gold-subtle: linear-gradient(135deg, #f4edc4 0%, #e7d29a 50%, #d4c76f 100%);
+  --gold-dark: #6b5d1a;            /* Dorado oscuro AAA compliant - mejor contraste */
+  --gold-core: #cfaf55;            /* Dorado vibrante oficial */
+  --gold-light: #e7d29a;           /* Dorado cremoso oficial */
+  --gold-subtle-bg: #f9f6e8;       /* Fondo dorado muy suave */
   
   /* Legacy gold support - now using realistic system */
   --accent: var(--gold-core);
@@ -43,22 +41,29 @@
   --accent-light: var(--gold-light);
   --accent-subtle: var(--gold-subtle-bg);
   
-  /* Pink Accent - Amor & Compassion - WCAG AAA */
-  --pink-primary: #be185d;         /* Deep pink AAA contrast */
-  --pink-light: #ec4899;           /* Medium pink accent */
-  --pink-dark: #9d174d;            /* Very deep pink */
-  --pink-subtle: #fdf2f8;          /* Background pink tint */
+  /* Púrpura Vibrante de Marca - Acentos Especiales */
+  --accent-vibrant: #5e17eb;       /* Púrpura vibrante oficial */
+  --accent-vibrant-light: #8b5cf6; /* Púrpura vibrante más claro */
+  --accent-vibrant-dark: #4c0db3;  /* Púrpura vibrante más oscuro */
+  --accent-vibrant-subtle: #ede9fe; /* Fondo púrpura muy suave */
   
-  /* Legacy pink support */
-  --secondary: var(--pink-primary);
-  --secondary-light: var(--pink-light);
-  --secondary-dark: var(--pink-dark);
-  --secondary-subtle: var(--pink-subtle);
+  /* Sistema Secundario - Basado en Colores de Marca */
+  --secondary: var(--accent-vibrant);
+  --secondary-light: var(--accent-vibrant-light);
+  --secondary-dark: var(--accent-vibrant-dark);
+  --secondary-subtle: var(--accent-vibrant-subtle);
   
-  /* Gradient Combinations */
-  --gradient-primary: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
-  --gradient-accent: linear-gradient(135deg, var(--accent-light) 0%, var(--accent) 100%);
+  /* Gradientes de Marca - Combinaciones Oficiales */
+  --gradient-primary: linear-gradient(135deg, var(--primary-medium) 0%, var(--primary-light) 50%, var(--primary) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-core) 100%);
   --gradient-secondary: linear-gradient(135deg, var(--secondary-light) 0%, var(--secondary) 100%);
+  --gradient-lavanda: linear-gradient(135deg, var(--primary-subtle) 0%, var(--primary-medium) 50%, var(--primary-light) 100%);
+  
+  /* Gradientes Especiales de Marca */
+  --gradient-hero: linear-gradient(135deg, var(--primary-subtle) 0%, var(--neutral-50) 30%, var(--gold-subtle-bg) 100%);
+  --gradient-luxury: linear-gradient(135deg, var(--primary-medium) 0%, var(--gold-light) 50%, var(--primary-subtle) 100%);
+  --gradient-warm: linear-gradient(135deg, var(--gold-subtle-bg) 0%, var(--primary-subtle) 100%);
+  --gradient-premium: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--gold-core) 100%);
   
   /* Legacy Support */
   --flame-blue-core: var(--primary);
@@ -140,14 +145,14 @@
   --purple-800: #6d28d9;
   --purple-900: #581c87;
   
-  /* Neutral System - Harmonized with Deep Colors */
-  --neutral-50: #fafafa;
-  --neutral-100: #f5f5f5;
-  --neutral-200: var(--deep-blue-200);
-  --neutral-600: var(--deep-blue-700);
-  --neutral-700: var(--deep-blue-800);
-  --neutral-800: var(--deep-blue-900);
-  --neutral-900: var(--purple-900);
+  /* Sistema Neutral - Armonizado con Paleta de Marca - WCAG AAA */
+  --neutral-50: #fefeff;          /* Blanco con tinte lavanda muy sutil */
+  --neutral-100: #f8f7fc;         /* Gris muy claro con tinte púrpura */
+  --neutral-200: #ece8f3;         /* Gris claro púrpura */
+  --neutral-600: #5a4e6b;         /* Gris medio AAA compliant */
+  --neutral-700: #3d3454;         /* Gris oscuro AAA compliant */
+  --neutral-800: #231a32;         /* Púrpura oscuro AAA compliant */
+  --neutral-900: #1a0e2e;         /* Púrpura muy oscuro para máximo contraste */
   
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -241,6 +246,27 @@
   
   .bg-gold-subtle {
     background: var(--gold-subtle);
+  }
+
+  /* Gradientes de Marca - Clases CSS */
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gradient-luxury {
+    background: var(--gradient-luxury);
+  }
+
+  .bg-gradient-warm {
+    background: var(--gradient-warm);
+  }
+
+  .bg-gradient-premium {
+    background: var(--gradient-premium);
+  }
+
+  .bg-gradient-lavanda {
+    background: var(--gradient-lavanda);
   }
   
   .text-gold-realistic {
@@ -338,6 +364,107 @@
   
   .animate-gold-shimmer {
     animation: goldShimmer 2s ease-in-out infinite;
+  }
+
+  /* Premium Hover Effects */
+  .hover-lift {
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  }
+
+  .hover-glow {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hover-glow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+  }
+
+  .hover-glow:hover::before {
+    left: 100%;
+  }
+
+  .hover-scale {
+    transition: transform 0.2s ease;
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.02);
+  }
+
+  .hover-rotate {
+    transition: transform 0.3s ease;
+  }
+
+  .hover-rotate:hover {
+    transform: rotate(2deg);
+  }
+
+  .hover-gradient {
+    background-size: 200% 200%;
+    transition: background-position 0.3s ease;
+  }
+
+  .hover-gradient:hover {
+    background-position: right center;
+  }
+
+  /* Professional Icon System */
+  .icon-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .icon-container:hover {
+    transform: scale(1.1) rotate(5deg);
+  }
+
+  .icon-badge {
+    background: var(--gold-realistic);
+    padding: 1rem;
+    border-radius: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .icon-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .icon-floating {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .icon-pulse {
+    animation: iconPulse 2s ease-in-out infinite;
+  }
+
+  .icon-glow {
+    filter: drop-shadow(0 0 8px rgba(var(--primary), 0.3));
+    transition: filter 0.3s ease;
+  }
+
+  .icon-glow:hover {
+    filter: drop-shadow(0 0 12px rgba(var(--primary), 0.5));
   }
   
   /* Glass Morphism Effects */
@@ -649,6 +776,22 @@
   55% { transform: translateY(calc(var(--sacred-xs) * 0.118)); opacity: 0.8; }
   89% { transform: translateY(calc(var(--sacred-xs) * -0.073)); opacity: 0.9; }
   100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes iconPulse {
+  0%, 100% { 
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% { 
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
 }
 
 /* Sacred Animation Classes */

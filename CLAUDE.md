@@ -56,48 +56,155 @@ This project uses pnpm with specific overrides for Vite. Always use `pnpm` comma
 - Focus on individual needs and holistic care
 - Professional yet approachable language
 
-### Design System - Advanced Color Palette
+### Design System - Paleta Oficial de Marca Odontología de Luz (2025)
 
-#### Primary Colors
-- **#2563eb (Primary Blue)**: Modern blue for headers, primary buttons, links
-- **#1d4ed8 (Primary Dark)**: Darker variant for hover states
-- **#3b82f6 (Primary Light)**: Lighter variant for secondary elements
+#### Colores Oficiales de Marca
+Los siguientes colores son los ÚNICOS colores aprobados para uso en el diseño:
 
-#### Realistic Gold Gradient System
-Replace solid gold with realistic metallic gradients that mimic real gold:
+**Paleta Principal:**
+- **#DDBDF4**: Lavanda suave - fondos delicados y elementos sutiles
+- **#BBA3F8**: Lavanda medio - acentos y elementos secundarios
+- **#9987C6**: Púrpura grisáceo - elementos de nivel medio
+- **#e7d29a**: Dorado cremoso - acentos cálidos y elegantes
+- **#cfaf55**: Dorado vibrante - botones principales y CTAs
+
+**Colores para Texto y Elementos Oscuros:**
+- **#002c82**: Azul marino profundo - texto principal (WCAG AAA)
+- **#5e17eb**: Púrpura vibrante - acentos especiales y elementos destacados
+
+#### Sistema de Colores Implementado
 
 ```css
-/* Main Gold Gradient - Realistic metallic appearance */
+/* Colores Primarios - Púrpuras/Lavandas de Marca */
+--primary: #002c82;              /* Azul marino profundo - texto principal */
+--primary-light: #9987C6;        /* Púrpura grisáceo - elementos medianos */
+--primary-medium: #BBA3F8;       /* Lavanda medio - acentos */
+--primary-subtle: #DDBDF4;       /* Lavanda suave - fondos delicados */
+
+/* Sistema Dorado Oficial */
+--gold-core: #cfaf55;            /* Dorado vibrante oficial */
+--gold-light: #e7d29a;           /* Dorado cremoso oficial */
 --gold-realistic: linear-gradient(135deg, 
-  #ffd900 0%,     /* Pure gold highlight */
-  #ffcd3c 15%,    /* Bright gold surface */
-  #f4a500 30%,    /* Rich gold mid-tone */
-  #e8940f 50%,    /* Deep gold shadow */
-  #cc7a00 70%,    /* Bronze shadow depth */
-  #ffcd3c 85%,    /* Reflected light */
-  #fff2cc 100%    /* Rim lighting */
+  #cfaf55 0%,     /* Dorado vibrante de marca */
+  #e7d29a 25%,    /* Dorado cremoso de marca */
+  #cfaf55 50%,    /* Dorado vibrante central */
+  #b8941a 75%,    /* Dorado más profundo */
+  #e7d29a 100%    /* Dorado cremoso final */
 );
 
-/* Subtle Gold for backgrounds */
---gold-subtle: linear-gradient(135deg, 
-  #fef3c7 0%, 
-  #fed7aa 50%, 
-  #fbbf24 100%
-);
-
-/* Dark Gold for text */
---gold-dark: #92400e;
+/* Púrpura Vibrante de Marca */
+--secondary: #5e17eb;            /* Púrpura vibrante oficial */
+--secondary-light: #8b5cf6;      /* Púrpura vibrante más claro */
+--secondary-dark: #4c0db3;       /* Púrpura vibrante más oscuro */
 ```
 
-#### Secondary Colors
-- **#ec4899 (Pink)**: Accent color for secondary elements, hover states
-- **#f472b6 (Pink Light)**: Lighter pink for backgrounds
+#### Gradientes Especiales de Marca
+```css
+/* Gradientes Oficiales para Secciones */
+--gradient-hero: linear-gradient(135deg, #DDBDF4 0%, #fefeff 30%, #f9f6e8 100%);
+--gradient-luxury: linear-gradient(135deg, #BBA3F8 0%, #e7d29a 50%, #DDBDF4 100%);
+--gradient-warm: linear-gradient(135deg, #f9f6e8 0%, #DDBDF4 100%);
+--gradient-lavanda: linear-gradient(135deg, #DDBDF4 0%, #BBA3F8 50%, #9987C6 100%);
+```
 
-#### Neutral System
-- **#171717 (Neutral 900)**: Primary text, dark backgrounds
-- **#262626 (Neutral 800)**: Secondary text
-- **#fafafa (Neutral 50)**: Light backgrounds
-- **#f5f5f5 (Neutral 100)**: Card backgrounds
+#### Restricciones de Color
+**IMPORTANTE: Evitar Colores No Complementarios**
+- ❌ NO usar negros puros (#000000)
+- ❌ NO usar rojos (#ff0000, #red, etc.)
+- ❌ NO usar colores que no estén en la paleta oficial
+- ❌ NO usar combinaciones disonantes
+- ✅ SOLO usar los colores especificados en la paleta oficial
+- ✅ Usar variaciones tonales de los colores oficiales cuando sea necesario
+
+#### Neutral System - Armonizado con Paleta de Marca
+- **#fefeff (Neutral 50)**: Blanco con tinte lavanda muy sutil
+- **#f8f7fc (Neutral 100)**: Gris muy claro con tinte púrpura
+- **#ece8f3 (Neutral 200)**: Gris claro púrpura
+- **#6b6285 (Neutral 600)**: Gris medio con base púrpura
+- **#4a4258 (Neutral 700)**: Gris oscuro púrpura
+- **#2d1b42 (Neutral 800)**: Púrpura oscuro profundo
+- **#1a0e2e (Neutral 900)**: Púrpura muy oscuro (reemplaza negro)
+
+### Enhanced Motion Design & Micro-Interactions (2025 Update)
+
+#### Scroll-Triggered Animation System
+Premium quality animations that appear from sides and top as users scroll:
+
+```css
+/* Enhanced Animation Variants */
+const fadeInFromLeft = {
+  hidden: { opacity: 0, x: -60, filter: 'blur(10px)' },
+  visible: { 
+    opacity: 1, 
+    x: 0, 
+    filter: 'blur(0px)',
+    transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }
+  }
+}
+
+const fadeInFromRight = {
+  hidden: { opacity: 0, x: 60, filter: 'blur(10px)' },
+  visible: { 
+    opacity: 1, 
+    x: 0, 
+    filter: 'blur(0px)',
+    transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }
+  }
+}
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.1
+    }
+  }
+}
+```
+
+#### Professional Icon System
+Icons with sophisticated hover effects and placement:
+
+```css
+/* Professional Icon Classes */
+.icon-container:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.icon-badge {
+  background: var(--gold-realistic);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.icon-floating {
+  animation: float 3s ease-in-out infinite;
+}
+
+.icon-pulse {
+  animation: iconPulse 2s ease-in-out infinite;
+}
+```
+
+#### Hover Effects & Micro-Interactions
+Subtle, premium quality hover states:
+
+```css
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.hover-glow:hover::before {
+  left: 100%; /* Shimmer effect */
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+```
 
 ### Expert UX/UI Design Guidelines (10+ Years Big Tech Experience)
 
