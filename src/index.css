@@ -1,0 +1,619 @@
+@import "tailwindcss";
+
+/* Sacred Geometry & IAM Triple Flame Design System */
+:root {
+  /* Sacred Geometry Foundation - Golden Ratio (Φ = 1.618) */
+  --phi: 1.618;
+  --phi-inverse: 0.618;
+  --phi-squared: 2.618;
+  --phi-cubed: 4.236;
+  
+  /* Sacred Mathematical Constants */
+  --sqrt-2: 1.414;
+  --sqrt-3: 1.732;
+  --sqrt-5: 2.236;
+  
+  /* Harmonious Color System - Professional & Warm */
+  
+  /* Primary Blue - Confidence & Trust */
+  --primary: #1E90FF;              /* Bright professional blue */
+  --primary-light: #87CEEB;        /* Light sky blue */
+  --primary-dark: #0066CC;         /* Deep blue */
+  --primary-subtle: #F0F8FF;       /* Alice blue tint */
+  
+  /* Gold Accent - Warmth & Premium */
+  --accent: #FFD700;               /* Pure gold */
+  --accent-dark: #DAA520;          /* Darker gold */
+  --accent-light: #FFEC8B;         /* Light gold */
+  --accent-subtle: #FFFACD;        /* Lemon chiffon */
+  
+  /* Pink Accent - Care & Compassion */
+  --secondary: #FF69B4;            /* Hot pink */
+  --secondary-light: #FFB6C1;      /* Light pink */
+  --secondary-dark: #FF1493;       /* Deep pink */
+  --secondary-subtle: #FFF0F5;     /* Lavender blush */
+  
+  /* Gradient Combinations */
+  --gradient-primary: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--accent-light) 0%, var(--accent) 100%);
+  --gradient-secondary: linear-gradient(135deg, var(--secondary-light) 0%, var(--secondary) 100%);
+  
+  /* Legacy Support */
+  --flame-blue-core: var(--primary);
+  --flame-blue-light: var(--primary-light);
+  --flame-blue-deep: var(--primary-dark);
+  --flame-blue-aura: var(--primary-subtle);
+  --flame-gold-core: var(--accent);
+  --flame-gold-light: var(--accent-light);
+  --flame-gold-deep: var(--accent-dark);
+  --flame-gold-aura: var(--accent-subtle);
+  --flame-pink-core: var(--secondary);
+  --flame-pink-light: var(--secondary-light);
+  --flame-pink-deep: var(--secondary-dark);
+  --flame-pink-aura: var(--secondary-subtle);
+  --flame-blue-radiant: var(--gradient-primary);
+  --flame-gold-radiant: var(--gradient-accent);
+  --flame-pink-radiant: var(--gradient-secondary);
+  --accent-solid: var(--accent);
+  --accent-hover: var(--accent-dark);
+  
+  /* Modern Spacing System - Clean & Balanced */
+  --space-xs: 0.5rem;         /* 8px */
+  --space-sm: 0.75rem;        /* 12px */
+  --space-md: 1rem;           /* 16px */
+  --space-lg: 1.5rem;         /* 24px */
+  --space-xl: 2rem;           /* 32px */
+  --space-2xl: 3rem;          /* 48px */
+  --space-3xl: 4rem;          /* 64px */
+  --space-4xl: 6rem;          /* 96px */
+  
+  /* Legacy Sacred Spacing Support */
+  --sacred-xs: var(--space-xs);
+  --sacred-sm: var(--space-sm);
+  --sacred-md: var(--space-md);
+  --sacred-lg: var(--space-lg);
+  --sacred-xl: var(--space-xl);
+  --sacred-2xl: var(--space-2xl);
+  --sacred-3xl: var(--space-3xl);
+  --space-phi-1: var(--space-xs);
+  --space-phi-2: var(--space-sm);
+  --space-phi-3: var(--space-md);
+  --space-phi-4: var(--space-lg);
+  --space-phi-5: var(--space-xl);
+  
+  /* Modern Typography Scale - Readable & Harmonious */
+  --text-xs: 0.75rem;         /* 12px */
+  --text-sm: 0.875rem;        /* 14px */
+  --text-md: 1rem;            /* 16px */
+  --text-lg: 1.125rem;        /* 18px */
+  --text-xl: 1.25rem;         /* 20px */
+  --text-2xl: 1.5rem;         /* 24px */
+  --text-3xl: 1.875rem;       /* 30px */
+  --text-4xl: 2.25rem;        /* 36px */
+  --text-5xl: 3rem;           /* 48px */
+  --text-6xl: 3.75rem;        /* 60px */
+  
+  /* Legacy Typography Support */
+  --text-phi-xs: var(--text-xs);
+  --text-phi-sm: var(--text-sm);
+  --text-phi-md: var(--text-md);
+  --text-phi-lg: var(--text-lg);
+  --text-phi-xl: var(--text-xl);
+  --text-phi-2xl: var(--text-3xl);
+  --text-phi-3xl: var(--text-5xl);
+  
+  /* Deep Color System - Warm & Professional */
+  --deep-blue-50: #eff6ff;
+  --deep-blue-100: #dbeafe;
+  --deep-blue-200: #bfdbfe;
+  --deep-blue-700: #1d4ed8;
+  --deep-blue-800: #1e40af;
+  --deep-blue-900: #1e3a8a;
+  
+  /* Purple Alternative */
+  --purple-50: #faf5ff;
+  --purple-100: #f3e8ff;
+  --purple-200: #e9d5ff;
+  --purple-700: #7c3aed;
+  --purple-800: #6d28d9;
+  --purple-900: #581c87;
+  
+  /* Neutral System - Harmonized with Deep Colors */
+  --neutral-50: #fafafa;
+  --neutral-100: #f5f5f5;
+  --neutral-200: var(--deep-blue-200);
+  --neutral-600: var(--deep-blue-700);
+  --neutral-700: var(--deep-blue-800);
+  --neutral-800: var(--deep-blue-900);
+  --neutral-900: var(--purple-900);
+  
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #213547;
+  background-color: #ffffff;
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Tailwind Classes - Modern Design System */
+@layer utilities {
+  .text-primary {
+    color: var(--primary);
+  }
+  
+  .text-primary-light {
+    color: var(--primary-light);
+  }
+  
+  .text-accent {
+    color: var(--accent-solid);
+  }
+  
+  .text-secondary {
+    color: var(--secondary);
+  }
+  
+  .text-neutral-600 {
+    color: var(--neutral-600);
+  }
+  
+  .text-neutral-700 {
+    color: var(--neutral-700);
+  }
+  
+  .text-neutral-800 {
+    color: var(--neutral-800);
+  }
+  
+  .text-neutral-900 {
+    color: var(--neutral-900);
+  }
+  
+  .bg-primary {
+    background-color: var(--primary);
+  }
+  
+  .bg-primary-light {
+    background-color: var(--primary-light);
+  }
+  
+  /* Triple Flame Background Classes */
+  .bg-flame-blue {
+    background: var(--flame-blue-radiant);
+  }
+  
+  .bg-flame-gold {
+    background: var(--flame-gold-radiant);
+  }
+  
+  .bg-flame-pink {
+    background: var(--flame-pink-radiant);
+  }
+  
+  .bg-accent {
+    background: var(--flame-gold-radiant);
+  }
+  
+  .bg-accent-hover {
+    background: var(--flame-gold-radiant);
+    filter: brightness(1.1);
+  }
+  
+  .bg-accent-subtle {
+    background: var(--flame-gold-aura);
+  }
+  
+  .bg-accent-solid {
+    background-color: var(--flame-gold-core);
+  }
+  
+  /* Triple Flame Text Classes */
+  .text-flame-blue {
+    color: var(--flame-blue-core);
+  }
+  
+  .text-flame-gold {
+    color: var(--flame-gold-core);
+  }
+  
+  .text-flame-pink {
+    color: var(--flame-pink-core);
+  }
+  
+  .text-gold-dark {
+    color: var(--flame-gold-deep);
+  }
+  
+  .bg-secondary {
+    background-color: var(--secondary);
+  }
+  
+  .bg-neutral-50 {
+    background-color: var(--neutral-50);
+  }
+  
+  .bg-neutral-100 {
+    background-color: var(--neutral-100);
+  }
+  
+  .bg-neutral-700 {
+    background-color: var(--neutral-700);
+  }
+  
+  .bg-neutral-800 {
+    background-color: var(--neutral-800);
+  }
+  
+  .bg-neutral-900 {
+    background-color: var(--neutral-900);
+  }
+  
+  .border-primary {
+    border-color: var(--primary);
+  }
+  
+  .border-accent {
+    border-color: var(--accent-solid);
+  }
+  
+  .border-secondary {
+    border-color: var(--secondary);
+  }
+  
+  .hover\:text-accent:hover {
+    color: var(--accent-solid);
+  }
+  
+  .hover\:bg-accent:hover {
+    background: var(--gold-hover);
+  }
+  
+  .hover\:bg-accent-hover:hover {
+    background: var(--gold-hover);
+  }
+  
+  .hover\:bg-primary-light:hover {
+    background-color: var(--primary-light);
+  }
+  
+  /* Advanced Motion Design & Effects */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  .animate-fade-in-scale {
+    animation: fadeInScale 0.5s ease-out forwards;
+  }
+  
+  .animate-slide-in-left {
+    animation: slideInLeft 0.7s ease-out forwards;
+  }
+  
+  .animate-slide-in-right {
+    animation: slideInRight 0.7s ease-out forwards;
+  }
+  
+  .animate-gold-shimmer {
+    animation: goldShimmer 2s ease-in-out infinite;
+  }
+  
+  /* Glass Morphism Effects */
+  .glass-effect {
+    backdrop-filter: blur(20px) saturate(180%);
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .glass-dark {
+    backdrop-filter: blur(20px) saturate(180%);
+    background: rgba(23, 23, 23, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Advanced Shadow System */
+  .shadow-modern {
+    box-shadow: 
+      0 20px 25px -5px rgba(0, 0, 0, 0.1), 
+      0 10px 10px -5px rgba(0, 0, 0, 0.04),
+      0 0 0 1px rgba(0, 0, 0, 0.05);
+  }
+  
+  .shadow-hover {
+    box-shadow: 
+      0 25px 50px -12px rgba(0, 0, 0, 0.25),
+      0 0 0 1px rgba(0, 0, 0, 0.05);
+  }
+  
+  .shadow-gold {
+    box-shadow: 
+      0 20px 25px -5px rgba(245, 158, 11, 0.2), 
+      0 10px 10px -5px rgba(245, 158, 11, 0.1);
+  }
+  
+  /* Neumorphism Effects */
+  .neomorphism {
+    background: var(--neutral-50);
+    box-shadow: 
+      20px 20px 60px #d1d5db,
+      -20px -20px 60px #ffffff;
+  }
+  
+  .neomorphism-inset {
+    background: var(--neutral-50);
+    box-shadow: 
+      inset 20px 20px 60px #d1d5db,
+      inset -20px -20px 60px #ffffff;
+  }
+  
+  /* Sacred Geometry Layout Utilities */
+  .breakout-full {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+  
+  .sacred-container {
+    max-width: calc(80rem * var(--phi)); /* Golden ratio container */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--sacred-lg);
+    padding-right: var(--sacred-lg);
+  }
+  
+  .content-wrapper {
+    max-width: 80rem; /* 1280px */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--sacred-md);
+    padding-right: var(--sacred-md);
+  }
+  
+  /* Sacred Proportional Utilities */
+  .aspect-phi {
+    aspect-ratio: var(--phi) / 1;
+  }
+  
+  .aspect-phi-inverse {
+    aspect-ratio: var(--phi-inverse) / 1;
+  }
+  
+  .aspect-sqrt-2 {
+    aspect-ratio: var(--sqrt-2) / 1;
+  }
+  
+  /* Sacred Spacing Utilities */
+  .space-sacred {
+    margin: var(--sacred-md);
+  }
+  
+  .gap-sacred {
+    gap: var(--sacred-md);
+  }
+  
+  .gap-phi {
+    gap: var(--space-phi-3);
+  }
+  
+  /* Sacred Geometric Shapes */
+  .sacred-circle {
+    border-radius: 50%;
+    width: var(--sacred-2xl);
+    height: var(--sacred-2xl);
+  }
+  
+  .vesica-piscis {
+    position: relative;
+    width: var(--sacred-2xl);
+    height: calc(var(--sacred-2xl) * var(--phi));
+  }
+  
+  .vesica-piscis::before,
+  .vesica-piscis::after {
+    content: '';
+    position: absolute;
+    width: var(--sacred-2xl);
+    height: var(--sacred-2xl);
+    border-radius: 50%;
+    background: var(--flame-gold-radiant);
+    opacity: 0.3;
+  }
+  
+  .vesica-piscis::before {
+    left: 0;
+    top: 0;
+  }
+  
+  .vesica-piscis::after {
+    right: 0;
+    top: 0;
+  }
+  
+  /* Sacred Grid Patterns */
+  .grid-phi {
+    display: grid;
+    grid-template-columns: var(--phi-inverse)fr 1fr;
+    gap: var(--sacred-md);
+  }
+  
+  .grid-sacred-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sacred-lg);
+  }
+  
+  .grid-hexagonal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc(var(--sacred-2xl) * var(--phi)), 1fr));
+    gap: var(--sacred-lg);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes goldShimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* Sacred Geometry Animations - Fibonacci Sequences */
+@keyframes sacredSpiral {
+  0% {
+    transform: rotate(0deg) scale(var(--phi-inverse));
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes tripleFlameBreath {
+  0%, 100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  33% {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+  66% {
+    transform: scale(0.95);
+    filter: brightness(0.9);
+  }
+}
+
+@keyframes vesicaPulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(var(--phi));
+  }
+}
+
+@keyframes fibonacci {
+  0% { transform: translateY(var(--sacred-xs)); opacity: 0; }
+  13% { transform: translateY(calc(var(--sacred-xs) * -0.618)); opacity: 0.2; }
+  21% { transform: translateY(calc(var(--sacred-xs) * 0.309)); opacity: 0.4; }
+  34% { transform: translateY(calc(var(--sacred-xs) * -0.191)); opacity: 0.6; }
+  55% { transform: translateY(calc(var(--sacred-xs) * 0.118)); opacity: 0.8; }
+  89% { transform: translateY(calc(var(--sacred-xs) * -0.073)); opacity: 0.9; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Sacred Animation Classes */
+.animate-sacred-spiral {
+  animation: sacredSpiral 1.618s ease-out forwards;
+}
+
+.animate-triple-flame {
+  animation: tripleFlameBreath 3s ease-in-out infinite;
+}
+
+.animate-vesica-pulse {
+  animation: vesicaPulse 2.618s ease-in-out infinite;
+}
+
+.animate-fibonacci {
+  animation: fibonacci 1.618s ease-out forwards;
+}
+
+/* Reduced Motion Support - Sacred Geometry Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-up,
+  .animate-fade-in-scale,
+  .animate-slide-in-left,
+  .animate-slide-in-right,
+  .animate-gold-shimmer,
+  .animate-sacred-spiral,
+  .animate-triple-flame,
+  .animate-vesica-pulse,
+  .animate-fibonacci {
+    animation: none;
+  }
+  
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  /* Preserve sacred proportions without motion */
+  .vesica-piscis::before,
+  .vesica-piscis::after {
+    opacity: 0.2;
+    transform: none;
+  }
+}
+
+/* Global Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
