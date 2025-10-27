@@ -1,13 +1,41 @@
-version: "3.8"
+version: "3.9"
+
+networks:
+  frontend:
+    driver: bridge
+    driver_opts:
+      com.docker.network.bridge.name: "easypanel-frontend"
+  internal:
+    driver: bridge
+    internal: true
 
 services:
   web:
     build:
       context: .
       dockerfile: Dockerfile
-    image: odontologiadeluz:latest
+      args:
+        - NODE_ENV=production
+        - BUILD_DATE=${BUILD_DATE:-$(date -u +'%Y-%m-%dT%H:%M:%SZ')}
+        - VCS_REF=${VCS_REF:-HEAD}
+    image: odontologiadeluz:2025-${VCS_REF:-latest}
     container_name: odontologiadeluz-web
     restart: unless-stopped
+    
+    # Network configuration
+    networks:
+      - frontend
+    
+    # Security options
+    security_opt:
+      - no-new-privileges:true
+    read_only: true
+    
+    # Temporary filesystems for read-only containers
+    tmpfs:
+      - /tmp:size=100M
+      - /var/cache/nginx:size=50M
+      - /var/run:size=10M
     
     # Puerto interno del contenedor
     expose:
@@ -16,30 +44,93 @@ services:
     # Variables de entorno
     environment:
       - NODE_ENV=production
+      - TZ=America/Santiago
+      - NGINX_WORKER_PROCESSES=auto
+      - NGINX_WORKER_CONNECTIONS=1024
     
-    # Healthcheck para monitoreo
+    # Enhanced Healthcheck
     healthcheck:
-      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/"]
+      test: ["CMD", "curl", "-f", "http://localhost/", "||", "exit", "1"]
       interval: 30s
       timeout: 10s
       retries: 3
       start_period: 40s
     
-    # Recursos (ajustar según tu VM)
+    # Resource limits optimized for 2025
     deploy:
       resources:
         limits:
-          cpus: '1'
+          cpus: '1.0'
           memory: 512M
+          pids: 100
         reservations:
           cpus: '0.25'
           memory: 128M
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 120s
+      update_config:
+        parallelism: 1
+        delay: 10s
+        failure_action: rollback
+        monitor: 60s
+        order: stop-first
+      rollback_config:
+        parallelism: 1
+        delay: 0s
+        failure_action: pause
+        monitor: 60s
+        order: stop-first
     
-    # Labels para Easypanel
+    # Logging configuration
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+        labels: "service,environment"
+    
+    # Enhanced Labels for EasyPanel 2025
     labels:
+      # EasyPanel configuration
       - "easypanel.enable=true"
       - "easypanel.name=odontologiadeluz"
       - "easypanel.domain=odontologiadeluz.cl"
+      - "easypanel.domain.www=www.odontologiadeluz.cl"
       - "easypanel.port=80"
       - "easypanel.https=true"
       - "easypanel.https.redirect=true"
+      - "easypanel.ssl.provider=letsencrypt"
+      - "easypanel.ssl.force=true"
+      
+      # Security labels
+      - "security.non-root=true"
+      - "security.scan=enabled"
+      - "security.csp=enabled"
+      - "security.headers=enhanced"
+      
+      # Monitoring labels
+      - "monitoring.enable=true"
+      - "monitoring.port=80"
+      - "monitoring.path=/"
+      - "monitoring.interval=30s"
+      
+      # Application metadata
+      - "app.name=Odontología de Luz"
+      - "app.version=2025.1"
+      - "app.description=Secure dental clinic website"
+      - "app.maintainer=CDX - Codex SpA"
+      - "app.repository=https://github.com/YOUR_USERNAME/odontologiadeluz.cl"
+      
+      # Deployment metadata
+      - "deploy.environment=production"
+      - "deploy.region=santiago"
+      - "deploy.stack=react-vite-nginx"
+      - "deploy.build-date=${BUILD_DATE:-$(date -u +'%Y-%m-%dT%H:%M:%SZ')}"
+      
+      # Performance labels
+      - "performance.cache=enabled"
+      - "performance.compression=gzip,brotli"
+      - "performance.cdn=ready"
