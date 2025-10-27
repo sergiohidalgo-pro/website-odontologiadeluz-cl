@@ -7,7 +7,15 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "docker:build": "docker build -t odontologiadeluz:latest .",
+    "docker:run": "docker run -d -p 80:80 --name odontologiadeluz odontologiadeluz:latest",
+    "docker:stop": "docker stop odontologiadeluz && docker rm odontologiadeluz",
+    "docker:logs": "docker logs -f odontologiadeluz",
+    "compose:up": "docker-compose up -d",
+    "compose:down": "docker-compose down",
+    "compose:logs": "docker-compose logs -f",
+    "verify:deploy": "bash verify-deploy.sh"
   },
   "dependencies": {
     "framer-motion": "^12.23.24",
