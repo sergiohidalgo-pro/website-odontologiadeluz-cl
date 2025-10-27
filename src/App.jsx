@@ -184,23 +184,6 @@ function App() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1.0, delay: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
       >
-        {/* Sacred Geometry Background */}
-        <motion.div 
-          className="absolute top-20 left-10 golden-circle"
-          animate={{ rotate: 360 }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        ></motion.div>
-        <motion.div 
-          className="absolute bottom-20 right-10 fibonacci-spiral"
-          animate={{ rotate: -360 }}
-          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-        ></motion.div>
-        <motion.div 
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 sacred-hexagon"
-          animate={{ scale: [1, 1.1, 1] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        ></motion.div>
-        
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
