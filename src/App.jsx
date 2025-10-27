@@ -1336,6 +1336,10 @@ function App() {
             </div>
             <div className="border-t border-white/30 pt-6">
               <p className="text-white/70 text-sm">© {new Date().getFullYear()} Odontología de Luz. Todos los derechos reservados.</p>
+              <p className="text-white/60 text-xs mt-3">
+                Creado con I.C. inteligencia del corazón y asistencia de IA por Sergio Hidalgo bajo la empresa{' '}
+                <a href="https://cdx.cl" target="_blank" rel="noopener noreferrer" className="text-white/90 hover:text-white underline transition-colors">CDX - Codex SpA</a>
+              </p>
             </div>
           </div>
         </div>
