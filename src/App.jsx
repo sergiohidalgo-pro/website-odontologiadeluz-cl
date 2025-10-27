@@ -231,7 +231,8 @@ function App() {
                     transition={{ duration: 0.6 }}
                   >¿Sientes que tu</motion.span>
                   <motion.span 
-                    className="block text-gold-core"
+                    style={{ color: '#ffb8d0' }}
+                    className="block"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
@@ -1176,7 +1177,7 @@ function App() {
               {/* Primary CTA Card */}
               <motion.div 
                 className="bg-white rounded-3xl p-10 shadow-2xl border-2"
-                style={{ borderColor: '#4169E1' }}
+                style={{ borderColor: '#a9e159' }}
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6 }}
@@ -1185,15 +1186,15 @@ function App() {
                 <div className="text-center mb-8">
                   <motion.div 
                     className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6"
-                    style={{ background: 'linear-gradient(135deg, #ffb8d0 0%, #FFB3C1 50%, #FFC9D6 100%)', boxShadow: '0 8px 32px rgba(255,184,208,0.3)' }}
-                    animate={{ scale: [1, 1.05, 1], boxShadow: ['0 8px 32px rgba(255,143,163,0.3)', '0 12px 40px rgba(255,143,163,0.5)', '0 8px 32px rgba(255,143,163,0.3)'] }}
+                    style={{ background: 'linear-gradient(135deg, #a9e159 0%, #c4ed8a 50%, #d4f1a8 100%)', boxShadow: '0 8px 32px rgba(169,225,89,0.4)' }}
+                    animate={{ scale: [1, 1.05, 1], boxShadow: ['0 8px 32px rgba(169,225,89,0.4)', '0 12px 40px rgba(169,225,89,0.6)', '0 8px 32px rgba(169,225,89,0.4)'] }}
                     transition={{ duration: 2, repeat: Infinity }}
                   >
                     <Phone className="w-10 h-10 text-white" />
                   </motion.div>
-                  <h4 className="text-3xl font-black text-neutral-800 mb-3">¡Reserva Ahora!</h4>
+                  <h4 className="text-3xl font-black mb-3" style={{ color: '#7ab83d' }}>¡Reserva Ahora!</h4>
                   <p className="text-lg text-neutral-700 mb-2">
-                    <strong style={{ color: '#F4C542' }}>Primera Consulta Gratis</strong> - Valor $50.000
+                    <strong style={{ color: '#a9e159' }}>Primera Consulta Gratis</strong> - Valor $50.000
                   </p>
                   <p className="text-sm text-neutral-600">Cupos limitados disponibles esta semana</p>
                 </div>
@@ -1202,7 +1203,7 @@ function App() {
                   <a 
                     href="tel:+56223456789" 
                     className="block w-full text-white py-5 px-8 rounded-2xl text-xl font-bold shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-offset-2 text-center cursor-pointer"
-                    style={{ background: 'linear-gradient(135deg, #4169E1 0%, #5A7FEB 100%)' }}
+                    style={{ background: 'linear-gradient(135deg, #a9e159 0%, #c4ed8a 100%)' }}
                   >
                     <Phone className="w-6 h-6 inline mr-3" />
                     Llamar Ahora: +56 2 2345 6789
@@ -1211,7 +1212,7 @@ function App() {
                   <a 
                     href="https://wa.me/56223456789" 
                     className="block w-full text-white py-5 px-8 rounded-2xl text-xl font-bold shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-offset-2 text-center cursor-pointer"
-                    style={{ background: 'linear-gradient(135deg, #25D366 0%, #128C7E 100%)' }}
+                    style={{ background: 'linear-gradient(135deg, #c4ed8a 0%, #d4f1a8 100%)' }}
                   >
                     <MessageCircle className="w-6 h-6 inline mr-3" />
                     WhatsApp Directo
@@ -1220,7 +1221,7 @@ function App() {
                   <a 
                     href="mailto:contacto@odontologiadeluz.cl" 
                     className="block w-full py-4 px-6 rounded-xl font-bold transition-all duration-300 text-center cursor-pointer border-2"
-                    style={{ borderColor: '#4169E1', color: '#4169E1' }}
+                    style={{ borderColor: '#a9e159', color: '#7ab83d' }}
                   >
                     <Mail className="w-5 h-5 inline mr-2" />
                     contacto@odontologiadeluz.cl
@@ -1231,11 +1232,11 @@ function App() {
               {/* Trust Signals */}
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white rounded-2xl p-6 text-center shadow-lg">
-                  <div className="text-3xl font-black mb-2" style={{ color: '#4169E1' }}>100%</div>
+                  <div className="text-3xl font-black mb-2" style={{ color: '#a9e159' }}>100%</div>
                   <div className="text-sm text-neutral-600 font-semibold">Satisfacción Garantizada</div>
                 </div>
                 <div className="bg-white rounded-2xl p-6 text-center shadow-lg">
-                  <div className="text-3xl font-black mb-2" style={{ color: '#F4C542' }}>+500</div>
+                  <div className="text-3xl font-black mb-2" style={{ color: '#c4ed8a' }}>+500</div>
                   <div className="text-sm text-neutral-600 font-semibold">Sonrisas Transformadas</div>
                 </div>
               </div>
