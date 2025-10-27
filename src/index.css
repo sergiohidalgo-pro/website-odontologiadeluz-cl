@@ -15,25 +15,26 @@
   
   /* Sistema de Colores Oficial - Odontología de Luz */
   
-  /* Colores Primarios - Púrpuras/Lavandas de Marca */
-  --primary: #002c82;              /* Azul marino profundo - texto principal AAA */
-  --primary-light: #9987C6;        /* Púrpura grisáceo - elementos medianos */
-  --primary-medium: #BBA3F8;       /* Lavanda medio - acentos */
-  --primary-subtle: #DDBDF4;       /* Lavanda suave - fondos delicados */
+  /* Colores Primarios - Basados en Azul Royal */
+  --primary: #4169E1;              /* Azul Royal - color principal de marca */
+  --primary-light: #6B8EF5;        /* Azul Royal claro */
+  --primary-medium: #5A7FEB;       /* Azul Royal medio */
+  --primary-subtle: #E8EFFE;       /* Azul Royal muy suave - fondos */
+  --primary-dark: #2952CC;         /* Azul Royal oscuro */
   
-  /* Sistema Dorado Oficial - Colores de Marca */
+  /* Sistema Dorado Oficial - Basado en Dorado Suave */
   --gold-realistic: linear-gradient(135deg, 
-    #cfaf55 0%,     /* Dorado vibrante de marca */
-    #e7d29a 25%,    /* Dorado cremoso de marca */
-    #cfaf55 50%,    /* Dorado vibrante central */
-    #b8941a 75%,    /* Dorado más profundo */
-    #e7d29a 100%    /* Dorado cremoso final */
+    #F4C542 0%,     /* Dorado suave de marca */
+    #F7D165 25%,    /* Dorado suave claro */
+    #F4C542 50%,    /* Dorado suave central */
+    #E0B030 75%,    /* Dorado suave profundo */
+    #F7D165 100%    /* Dorado suave final */
   );
-  --gold-subtle: linear-gradient(135deg, #f4edc4 0%, #e7d29a 50%, #d4c76f 100%);
-  --gold-dark: #6b5d1a;            /* Dorado oscuro AAA compliant - mejor contraste */
-  --gold-core: #cfaf55;            /* Dorado vibrante oficial */
-  --gold-light: #e7d29a;           /* Dorado cremoso oficial */
-  --gold-subtle-bg: #f9f6e8;       /* Fondo dorado muy suave */
+  --gold-subtle: linear-gradient(135deg, #FDF5E0 0%, #F7D165 50%, #F4C542 100%);
+  --gold-dark: #B8941F;            /* Dorado oscuro AAA compliant */
+  --gold-core: #F4C542;            /* Dorado suave oficial */
+  --gold-light: #F7D165;           /* Dorado suave claro */
+  --gold-subtle-bg: #FFFBF0;       /* Fondo dorado muy suave */
   
   /* Legacy gold support - now using realistic system */
   --accent: var(--gold-core);
@@ -41,29 +42,29 @@
   --accent-light: var(--gold-light);
   --accent-subtle: var(--gold-subtle-bg);
   
-  /* Púrpura Vibrante de Marca - Acentos Especiales */
-  --accent-vibrant: #5e17eb;       /* Púrpura vibrante oficial */
-  --accent-vibrant-light: #8b5cf6; /* Púrpura vibrante más claro */
-  --accent-vibrant-dark: #4c0db3;  /* Púrpura vibrante más oscuro */
-  --accent-vibrant-subtle: #ede9fe; /* Fondo púrpura muy suave */
+  /* Rosa Coral de Marca - Acentos Especiales */
+  --accent-vibrant: #FF8FA3;       /* Rosa coral oficial */
+  --accent-vibrant-light: #FFB3C1; /* Rosa coral más claro */
+  --accent-vibrant-dark: #FF6B85;  /* Rosa coral más oscuro */
+  --accent-vibrant-subtle: #FFF0F3; /* Fondo rosa muy suave */
   
-  /* Sistema Secundario - Basado en Colores de Marca */
+  /* Sistema Secundario - Basado en Rosa Coral */
   --secondary: var(--accent-vibrant);
   --secondary-light: var(--accent-vibrant-light);
   --secondary-dark: var(--accent-vibrant-dark);
   --secondary-subtle: var(--accent-vibrant-subtle);
   
   /* Gradientes de Marca - Combinaciones Oficiales */
-  --gradient-primary: linear-gradient(135deg, var(--primary-medium) 0%, var(--primary-light) 50%, var(--primary) 100%);
+  --gradient-primary: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 50%, var(--primary-dark) 100%);
   --gradient-accent: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-core) 100%);
   --gradient-secondary: linear-gradient(135deg, var(--secondary-light) 0%, var(--secondary) 100%);
-  --gradient-lavanda: linear-gradient(135deg, var(--primary-subtle) 0%, var(--primary-medium) 50%, var(--primary-light) 100%);
+  --gradient-lavanda: linear-gradient(135deg, var(--primary-subtle) 0%, var(--primary-light) 50%, var(--primary) 100%);
   
-  /* Gradientes Especiales de Marca */
-  --gradient-hero: linear-gradient(135deg, var(--primary-subtle) 0%, var(--neutral-50) 30%, var(--gold-subtle-bg) 100%);
-  --gradient-luxury: linear-gradient(135deg, var(--primary-medium) 0%, var(--gold-light) 50%, var(--primary-subtle) 100%);
-  --gradient-warm: linear-gradient(135deg, var(--gold-subtle-bg) 0%, var(--primary-subtle) 100%);
-  --gradient-premium: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--gold-core) 100%);
+  /* Gradientes Especiales de Marca - Armonizados */
+  --gradient-hero: linear-gradient(135deg, #E8EFFE 0%, #FFFFFF 30%, #FFFBF0 100%);
+  --gradient-luxury: linear-gradient(135deg, #6B8EF5 0%, #F7D165 50%, #FFB3C1 100%);
+  --gradient-warm: linear-gradient(135deg, #FFFBF0 0%, #FFF0F3 100%);
+  --gradient-premium: linear-gradient(135deg, var(--primary) 0%, var(--gold-core) 50%, var(--secondary) 100%);
   
   /* Legacy Support */
   --flame-blue-core: var(--primary);
@@ -146,13 +147,13 @@
   --purple-900: #581c87;
   
   /* Sistema Neutral - Armonizado con Paleta de Marca - WCAG AAA */
-  --neutral-50: #fefeff;          /* Blanco con tinte lavanda muy sutil */
-  --neutral-100: #f8f7fc;         /* Gris muy claro con tinte púrpura */
-  --neutral-200: #ece8f3;         /* Gris claro púrpura */
-  --neutral-600: #5a4e6b;         /* Gris medio AAA compliant */
-  --neutral-700: #3d3454;         /* Gris oscuro AAA compliant */
-  --neutral-800: #231a32;         /* Púrpura oscuro AAA compliant */
-  --neutral-900: #1a0e2e;         /* Púrpura muy oscuro para máximo contraste */
+  --neutral-50: #FAFBFF;          /* Blanco con tinte azul muy sutil */
+  --neutral-100: #F5F7FC;         /* Gris muy claro con tinte azul */
+  --neutral-200: #E8ECFA;         /* Gris claro azulado */
+  --neutral-600: #4A5568;         /* Gris medio AAA compliant */
+  --neutral-700: #2D3748;         /* Gris oscuro AAA compliant */
+  --neutral-800: #1A202C;         /* Gris muy oscuro AAA compliant */
+  --neutral-900: #0F1419;         /* Negro azulado para máximo contraste */
   
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;

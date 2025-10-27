@@ -57,10 +57,16 @@ function App() {
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <motion.div
+              className="flex items-center gap-3"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
+              <img 
+                src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=80&h=80&fit=crop&crop=center" 
+                alt="Logo Odontología de Luz" 
+                className="w-12 h-12 rounded-full object-cover shadow-lg"
+              />
               <h1 className="text-2xl font-black text-neutral-800 tracking-tight">
                 <span className="text-primary">Odontología</span>
                 <span className="text-accent ml-2">de Luz</span>
@@ -76,7 +82,7 @@ function App() {
             >
               <motion.a 
                 href="#problema" 
-                className="text-neutral-700 hover:text-primary transition-all duration-300 font-medium focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-lg px-3 py-2 relative group"
+                className="text-neutral-700 hover:text-primary transition-all duration-300 font-medium focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-lg px-3 py-2 relative group cursor-pointer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -85,7 +91,7 @@ function App() {
               </motion.a>
               <motion.a 
                 href="#solucion" 
-                className="text-neutral-700 hover:text-primary transition-all duration-300 font-medium focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-lg px-3 py-2 relative group"
+                className="text-neutral-700 hover:text-primary transition-all duration-300 font-medium focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-lg px-3 py-2 relative group cursor-pointer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -94,7 +100,7 @@ function App() {
               </motion.a>
               <motion.a 
                 href="#contacto" 
-                className="text-neutral-700 hover:text-primary transition-all duration-300 font-medium focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-lg px-3 py-2 relative group"
+                className="text-neutral-700 hover:text-primary transition-all duration-300 font-medium focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-lg px-3 py-2 relative group cursor-pointer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -189,7 +195,7 @@ function App() {
                 variants={fadeInFromLeft}
               >
                 <motion.button 
-                  className="group bg-gold-realistic text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-gold-core focus:ring-offset-2"
+                  className="group bg-gold-realistic text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-gold-core focus:ring-offset-2 cursor-pointer"
                   whileHover={{ scale: 1.02, y: -2 }}
                   whileTap={{ scale: 0.98 }}
                   transition={{ duration: 0.2 }}
@@ -197,7 +203,7 @@ function App() {
                   Reserva tu Evaluación Gratuita
                 </motion.button>
                 <motion.button 
-                  className="group bg-white border-2 border-primary text-primary px-8 py-4 rounded-xl font-bold hover:bg-primary hover:text-white transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-primary focus:ring-offset-2"
+                  className="group bg-white border-2 border-primary text-primary px-8 py-4 rounded-xl font-bold hover:bg-primary hover:text-white transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-primary focus:ring-offset-2 cursor-pointer"
                   whileHover={{ scale: 1.02, y: -2 }}
                   whileTap={{ scale: 0.98 }}
                   transition={{ duration: 0.2 }}
@@ -474,7 +480,7 @@ function App() {
                 Descubre cómo la atención dental puede ser una experiencia positiva y reconfortante.
               </p>
               <motion.button 
-                className="bg-gold-realistic text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-gold-core focus:ring-offset-2"
+                className="bg-gold-realistic text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-gold-core focus:ring-offset-2 cursor-pointer"
                 whileHover={{ scale: 1.05, y: -3 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ duration: 0.2 }}
@@ -597,9 +603,9 @@ function App() {
             
             <div className="grid md:grid-cols-3 gap-8">
               
-              {/* Difference 1 */}
+              {/* Difference 1 - Azul Royal */}
               <div className="bg-white rounded-2xl p-8 text-center shadow-lg">
-                <div className="w-20 h-20 bg-gold-realistic rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6" style={{ backgroundColor: '#4169E1' }}>
                   <Clock className="w-10 h-10 text-white" />
                 </div>
                 <h5 className="text-xl font-bold text-neutral-800 mb-4">Citas Extendidas</h5>
@@ -609,9 +615,9 @@ function App() {
                 </p>
               </div>
               
-              {/* Difference 2 */}
+              {/* Difference 2 - Dorado suave */}
               <div className="bg-white rounded-2xl p-8 text-center shadow-lg">
-                <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6" style={{ backgroundColor: '#F4C542' }}>
                   <Heart className="w-10 h-10 text-white" />
                 </div>
                 <h5 className="text-xl font-bold text-neutral-800 mb-4">Seguimiento Continuo</h5>
@@ -621,9 +627,9 @@ function App() {
                 </p>
               </div>
               
-              {/* Difference 3 */}
+              {/* Difference 3 - Rosa coral */}
               <div className="bg-white rounded-2xl p-8 text-center shadow-lg">
-                <div className="w-20 h-20 bg-secondary rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6" style={{ backgroundColor: '#FF8FA3' }}>
                   <CheckCircle className="w-10 h-10 text-white" />
                 </div>
                 <h5 className="text-xl font-bold text-neutral-800 mb-4">Tecnología Avanzada</h5>
@@ -642,7 +648,7 @@ function App() {
               Agenda tu evaluación gratuita y descubre cómo podemos ayudarte a lograr 
               la sonrisa saludable y radiante que siempre has deseado.
             </p>
-            <button className="bg-gold-realistic text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-gold-core focus:ring-offset-2">
+            <button className="bg-gold-realistic text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-gold-core focus:ring-offset-2 cursor-pointer">
               Reservar Evaluación Gratuita
             </button>
           </div>
@@ -821,7 +827,7 @@ function App() {
                 </p>
                 
                 <div className="space-y-4 mb-8">
-                  <a href="tel:+56223456789" className="block w-full bg-gold-realistic text-white py-6 px-8 rounded-2xl text-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-gold-core focus:ring-offset-2 text-center">
+                  <a href="tel:+56223456789" className="block w-full bg-gold-realistic text-white py-6 px-8 rounded-2xl text-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-gold-core focus:ring-offset-2 text-center cursor-pointer">
                     <Phone className="w-6 h-6 inline mr-3" />+56 2 2345 6789
                   </a>
                   <p className="text-sm text-neutral-600">Atención directa de nuestro equipo profesional</p>
@@ -830,24 +836,23 @@ function App() {
                 <div className="border-t border-gray-200 pt-8">
                   <h5 className="font-bold text-neutral-800 mb-4">Otras formas de contacto:</h5>
                   <div className="space-y-3">
-                    <a href="mailto:contacto@odontologiadeluz.cl" className="block bg-primary text-white py-3 px-6 rounded-xl font-bold hover:bg-primary-dark transition-all duration-300">
+                    <a href="mailto:contacto@odontologiadeluz.cl" className="block bg-primary text-white py-3 px-6 rounded-xl font-bold hover:bg-primary-dark transition-all duration-300 cursor-pointer">
                       <Mail className="w-4 h-4 inline mr-2" />contacto@odontologiadeluz.cl
                     </a>
-                    <a href="https://wa.me/56223456789" className="block bg-secondary text-white py-3 px-6 rounded-xl font-bold hover:bg-secondary-dark transition-all duration-300">
+                    <a href="https://wa.me/56223456789" className="block bg-secondary text-white py-3 px-6 rounded-xl font-bold hover:bg-secondary-dark transition-all duration-300 cursor-pointer">
                       <MessageCircle className="w-4 h-4 inline mr-2" />WhatsApp
                     </a>
                   </div>
                 </div>
               </div>
               
-              {/* Urgency + Guarantees */}
+              {/* Garantía de Calidad */}
               <div className="bg-white/40 backdrop-blur-md rounded-2xl p-6 border border-white/50">
-                <h5 className="text-lg font-bold text-neutral-900 mb-4">Emergencias Dentales</h5>
-                <p className="text-neutral-800 mb-4">Para urgencias dentales, contáctanos inmediatamente. Tenemos atención de emergencia disponible.</p>
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <a href="tel:+56223456789" className="bg-secondary text-white py-3 px-6 rounded-xl font-bold text-center hover:bg-secondary-dark transition-all duration-300">
-                    Emergencia 24/7
-                  </a>
+                <h5 className="text-lg font-bold text-neutral-900 mb-4">Garantía de Calidad</h5>
+                <p className="text-neutral-800 mb-4">Todos nuestros tratamientos están respaldados por nuestra garantía de satisfacción y seguimiento continuo.</p>
+                <div className="flex items-center gap-3 text-neutral-800">
+                  <Shield className="w-6 h-6 text-primary" />
+                  <span className="font-semibold">Atención profesional garantizada</span>
                 </div>
               </div>
             </div>
@@ -885,7 +890,7 @@ function App() {
                   </div>
                   <div className="flex justify-between items-center py-3">
                     <span className="font-semibold text-neutral-700">Domingos</span>
-                    <span className="text-gray-500 font-medium">Solo Emergencias</span>
+                    <span className="text-gray-500 font-medium">Cerrado</span>
                   </div>
                 </div>
                 
@@ -924,12 +929,12 @@ function App() {
             </h5>
             <p className="text-primary-light text-xl mb-6 max-w-2xl mx-auto">Cuidando tu sonrisa con amor y profesionalismo</p>
             <div className="flex justify-center space-x-6 mb-8">
-              <a href="#servicios" className="text-primary-light hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary rounded px-3 py-2" aria-label="Ir a servicios">Servicios</a>
-              <a href="#equipo" className="text-primary-light hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary rounded px-3 py-2" aria-label="Conocer equipo">Equipo</a>
-              <a href="#contacto" className="text-primary-light hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary rounded px-3 py-2" aria-label="Información de contacto">Contacto</a>
+              <a href="#servicios" className="text-primary-light hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary rounded px-3 py-2 cursor-pointer" aria-label="Ir a servicios">Servicios</a>
+              <a href="#equipo" className="text-primary-light hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary rounded px-3 py-2 cursor-pointer" aria-label="Conocer equipo">Equipo</a>
+              <a href="#contacto" className="text-primary-light hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary rounded px-3 py-2 cursor-pointer" aria-label="Información de contacto">Contacto</a>
             </div>
             <div className="border-t border-primary-light pt-6">
-              <p className="text-primary-light text-sm">© 2024 Odontología de Luz. Todos los derechos reservados.</p>
+              <p className="text-primary-light text-sm">© {new Date().getFullYear()} Odontología de Luz. Todos los derechos reservados.</p>
             </div>
           </div>
         </div>
