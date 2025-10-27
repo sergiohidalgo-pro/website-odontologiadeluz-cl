@@ -4,8 +4,8 @@ import { Heart, Smile, User, Clock, MessageCircle, Star, Phone, Mail, MapPin, Ch
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import logo from './assets/logo-odontologia-de-luz-100x100.png'
-import imagenFran from './assets/odontologa-francisca-montecino-2.png'
-import imagenFran1 from './assets/odontologa-francisca-montecino-1.png'
+import imagenFran from './assets/odontologa-francisca-montecino-6.png'
+import imagenFran1 from './assets/odontologa-francisca-montecino-2.png'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -178,9 +178,8 @@ function App() {
       {/* Hero Section - Problem-Focused */}
       <motion.section 
         className="breakout-full relative overflow-hidden section-spacing"
-        style={{ background: 'linear-gradient(135deg, #E8EFFE 0%, #FFFBF0 50%, #FFF0F3 100%)' }} 
+        style={{ background: 'linear-gradient(135deg, #E8EFFE 0%, #FFFBF0 50%, #FFF0F3 100%)', paddingTop: 0,  y: textY }} 
         role="banner"
-        style={{ y: textY }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.0, delay: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
@@ -317,7 +316,7 @@ function App() {
                     </motion.div>
                     <div>
                       <p className="text-2xl font-black text-neutral-800">100%</p>
-                      <p className="text-neutral-600 font-medium">Sin Ansiedad</p>
+                      <p className="text-neutral-600 font-medium">Confianza</p>
                     </div>
                   </div>
                 </motion.div>
@@ -1093,7 +1092,7 @@ function App() {
       <motion.section 
         id="contacto" 
         className="breakout-full relative overflow-hidden section-spacing"
-        style={{ background: 'linear-gradient(135deg, #E8EFFE 0%, #FFFBF0 50%, #FFF0F3 100%)' }} 
+        style={{ background: 'linear-gradient(135deg, #E8EFFE 0%, #FFFBF0 50%, #FFF0F3 100%);' }} 
         role="region" 
         aria-labelledby="contacto-title"
         initial={{ opacity: 0 }}
