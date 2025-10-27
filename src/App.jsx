@@ -1,10 +1,17 @@
 import './App.css'
+import { Heart, Smile, User, Clock, MessageCircle, Star, Phone, Mail, MapPin, CheckCircle, Shield, Award, Sparkles, TrendingUp } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
+    <motion.div 
+      className="min-h-screen bg-white"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
+    >
       {/* Header - Modern & Clean */}
-      <header className="breakout-full bg-white/95 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-100 shadow-sm" role="banner">
+      <header className="breakout-full glass-effect sticky top-0 z-50 border-b border-white/20 shadow-modern" role="banner">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div>
@@ -32,10 +39,17 @@ function App() {
       </header>
 
       {/* Hero Section - Problem-Focused */}
-      <section className="breakout-full bg-gradient-to-br from-primary-subtle via-white to-accent-subtle relative overflow-hidden py-20 lg:py-32" role="banner">
-        {/* Background Elements */}
-        <div className="absolute top-20 left-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
+      <motion.section 
+        className="breakout-full bg-gradient-to-br from-primary-subtle via-white to-gold-subtle-bg relative overflow-hidden section-spacing" 
+        role="banner"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
+        {/* Sacred Geometry Background */}
+        <div className="absolute top-20 left-10 golden-circle"></div>
+        <div className="absolute bottom-20 right-10 fibonacci-spiral"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 sacred-hexagon"></div>
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -43,26 +57,28 @@ function App() {
             <div className="space-y-8">
               <div>
                 <div className="inline-flex items-center bg-secondary-subtle px-6 py-3 rounded-full mb-6">
-                  <span className="text-secondary-dark font-bold text-sm uppercase tracking-wider">💝 Atención con el Corazón</span>
+                  <Heart className="w-4 h-4 text-secondary mr-2" />
+                  <span className="text-secondary-dark font-bold text-sm uppercase tracking-wider">Atención con el Corazón</span>
                 </div>
                 <h2 className="text-5xl lg:text-6xl font-black text-neutral-800 leading-tight tracking-tight mb-6">
-                  <span className="text-secondary">¿Tienes miedo</span>
-                  <span className="block text-neutral-700">al dentista?</span>
-                  <span className="block text-accent">Yo te entiendo</span>
+                  <span className="text-primary">¿Sientes que tu</span>
+                  <span className="block text-gold-core">sonrisa no refleja</span>
+                  <span className="block text-pink-primary">quien realmente eres?</span>
                 </h2>
               </div>
               
               <p className="text-xl text-neutral-700 leading-relaxed max-w-2xl">
-                Sé lo que sientes: <strong className="text-secondary">ansiedad, dolor, vergüenza</strong>. He creado Odontología de Luz para que vivas 
-                una experiencia completamente diferente, donde tu <strong className="text-accent">ser real</strong> es lo más importante.
+                En Odontología de Luz entendemos que cada sonrisa cuenta una historia única. Ofrecemos 
+                <strong className="text-primary">atención dental integral</strong> con la calidez humana que mereces, 
+                donde tu <strong className="text-gold-core">bienestar emocional</strong> es tan importante como tu salud bucal.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="group bg-accent text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-accent focus:ring-offset-2">
-                  Quiero Sentirme Seguro/a
+                <button className="group bg-gold-realistic text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-gold-core focus:ring-offset-2">
+                  Reserva tu Evaluación Gratuita
                 </button>
-                <button className="group bg-white border-2 border-secondary text-secondary px-8 py-4 rounded-xl font-bold hover:bg-secondary hover:text-white transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-secondary focus:ring-offset-2">
-                  Conoce Mi Historia
+                <button className="group bg-white border-2 border-primary text-primary px-8 py-4 rounded-xl font-bold hover:bg-primary hover:text-white transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-primary focus:ring-offset-2">
+                  Conoce Nuestro Enfoque
                 </button>
               </div>
             </div>
@@ -76,10 +92,10 @@ function App() {
                 </div>
                 
                 {/* Floating Trust Card */}
-                <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-6 border border-gray-100">
+                <div className="absolute -bottom-6 -left-6 glass-effect rounded-2xl shadow-modern p-6">
                   <div className="flex items-center gap-4">
-                    <div className="w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center">
-                      <span className="text-white text-2xl">😌</span>
+                    <div className="w-16 h-16 bg-gold-realistic rounded-2xl flex items-center justify-center">
+                      <Smile className="w-8 h-8 text-white" />
                     </div>
                     <div>
                       <p className="text-2xl font-black text-neutral-800">100%</p>
@@ -94,23 +110,34 @@ function App() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Problem Identification Section */}
-      <section id="problema" className="breakout-full bg-neutral-800 text-white py-20 lg:py-32" role="region" aria-labelledby="problema-title">
+      <motion.section 
+        id="problema" 
+        className="breakout-full bg-neutral-800 text-white section-spacing relative overflow-hidden" 
+        role="region" 
+        aria-labelledby="problema-title"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
         <div className="max-w-7xl mx-auto px-6">
           {/* Section Header */}
           <div className="text-center mb-16">
             <div className="inline-flex items-center bg-secondary/20 px-6 py-3 rounded-full mb-6">
-              <span className="text-secondary-light font-bold text-sm uppercase tracking-wider">😔 Tu Realidad Actual</span>
+              <User className="w-4 h-4 text-secondary mr-2" />
+              <span className="text-secondary-light font-bold text-sm uppercase tracking-wider">Tu Realidad Actual</span>
             </div>
             <h3 id="problema-title" className="text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight mb-6">
-              <span className="text-secondary">¿Te identificas</span>
-              <span className="block text-gray-300">con alguna de estas</span>
-              <span className="block text-accent">situaciones?</span>
+              <span className="text-primary">Reconocemos las</span>
+              <span className="block text-gray-300">preocupaciones reales</span>
+              <span className="block text-gold-core">de nuestros pacientes</span>
             </h3>
             <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-              No estás solo/a. Estos son los miedos y dolores más comunes que escucho todos los días en mi consulta.
+              Sabemos que visitar al dentista puede generar ansiedad. Por eso hemos diseñado un enfoque 
+              que prioriza tu comodidad y tranquilidad en cada paso del tratamiento.
             </p>
           </div>
 
@@ -119,67 +146,73 @@ function App() {
             
             {/* Fear 1 */}
             <div className="bg-neutral-700 rounded-2xl p-8 border border-neutral-600 hover:border-secondary/30 transition-all duration-300">
-              <div className="w-16 h-16 bg-secondary/20 rounded-xl flex items-center justify-center text-secondary text-2xl mb-6">
-                😰
+              <div className="w-16 h-16 bg-secondary/20 rounded-xl flex items-center justify-center mb-6">
+                <Shield className="w-8 h-8 text-secondary" />
               </div>
-              <h4 className="text-xl font-bold text-white mb-4">Miedo y Ansiedad</h4>
+              <h4 className="text-xl font-bold text-white mb-4">Ansiedad Dental</h4>
               <p className="text-gray-300 leading-relaxed">
-                "Solo pensar en ir al dentista me da pánico. He postergado mi cita por años y ahora mi problema es peor."
+                Ofrecemos técnicas de relajación y un ambiente cálido donde te sentirás cómodo/a 
+                y seguro/a durante todo el tratamiento.
               </p>
             </div>
 
             {/* Fear 2 */}
             <div className="bg-neutral-700 rounded-2xl p-8 border border-neutral-600 hover:border-secondary/30 transition-all duration-300">
-              <div className="w-16 h-16 bg-secondary/20 rounded-xl flex items-center justify-center text-secondary text-2xl mb-6">
-                💸
+              <div className="w-16 h-16 bg-secondary/20 rounded-xl flex items-center justify-center mb-6">
+                <TrendingUp className="w-8 h-8 text-secondary" />
               </div>
-              <h4 className="text-xl font-bold text-white mb-4">Costos Inesperados</h4>
+              <h4 className="text-xl font-bold text-white mb-4">Transparencia en Costos</h4>
               <p className="text-gray-300 leading-relaxed">
-                "Siempre me sorprenden con tratamientos carísimos que no sabía que necesitaba. No entiendo por qué es tan caro."
+                Brindamos presupuestos detallados y transparentes desde la primera consulta, 
+                sin sorpresas ni costos ocultos.
               </p>
             </div>
 
             {/* Fear 3 */}
             <div className="bg-neutral-700 rounded-2xl p-8 border border-neutral-600 hover:border-secondary/30 transition-all duration-300">
-              <div className="w-16 h-16 bg-secondary/20 rounded-xl flex items-center justify-center text-secondary text-2xl mb-6">
-                😔
+              <div className="w-16 h-16 bg-secondary/20 rounded-xl flex items-center justify-center mb-6">
+                <Smile className="w-8 h-8 text-secondary" />
               </div>
-              <h4 className="text-xl font-bold text-white mb-4">Vergüenza por mi Sonrisa</h4>
+              <h4 className="text-xl font-bold text-white mb-4">Autoestima y Confianza</h4>
               <p className="text-gray-300 leading-relaxed">
-                "Me da pena sonreír. He evitado fotos y situaciones sociales porque no me gusta cómo se ven mis dientes."
+                Te ayudamos a recuperar la seguridad en tu sonrisa con tratamientos 
+                estéticos personalizados y resultados naturales.
               </p>
             </div>
 
             {/* Fear 4 */}
             <div className="bg-neutral-700 rounded-2xl p-8 border border-neutral-600 hover:border-secondary/30 transition-all duration-300">
-              <div className="w-16 h-16 bg-secondary/20 rounded-xl flex items-center justify-center text-secondary text-2xl mb-6">
-                ⚡
+              <div className="w-16 h-16 bg-secondary/20 rounded-xl flex items-center justify-center mb-6">
+                <Sparkles className="w-8 h-8 text-secondary" />
               </div>
-              <h4 className="text-xl font-bold text-white mb-4">Dolor y Molestias</h4>
+              <h4 className="text-xl font-bold text-white mb-4">Manejo del Dolor</h4>
               <p className="text-gray-300 leading-relaxed">
-                "Siempre salgo adolorido/a de la consulta dental. Siento que no entienden mi sensibilidad al dolor."
+                Utilizamos técnicas avanzadas de anestesia y control del dolor 
+                para garantizar tratamientos cómodos y sin molestias.
               </p>
             </div>
 
             {/* Fear 5 */}
             <div className="bg-neutral-700 rounded-2xl p-8 border border-neutral-600 hover:border-secondary/30 transition-all duration-300">
-              <div className="w-16 h-16 bg-secondary/20 rounded-xl flex items-center justify-center text-secondary text-2xl mb-6">
-                👩‍⚕️
+              <div className="w-16 h-16 bg-secondary/20 rounded-xl flex items-center justify-center mb-6">
+                <Heart className="w-8 h-8 text-secondary" />
               </div>
-              <h4 className="text-xl font-bold text-white mb-4">Atención Fría e Impersonal</h4>
+              <h4 className="text-xl font-bold text-white mb-4">Atención Personalizada</h4>
               <p className="text-gray-300 leading-relaxed">
-                "Me siento como un número más. El dentista no me escucha ni entiende mis preocupaciones reales."
+                Cada paciente recibe atención individualizada, escuchamos tus preocupaciones 
+                y adaptamos el tratamiento a tus necesidades específicas.
               </p>
             </div>
 
             {/* Fear 6 */}
             <div className="bg-neutral-700 rounded-2xl p-8 border border-neutral-600 hover:border-secondary/30 transition-all duration-300">
-              <div className="w-16 h-16 bg-secondary/20 rounded-xl flex items-center justify-center text-secondary text-2xl mb-6">
-                ⏰
+              <div className="w-16 h-16 bg-secondary/20 rounded-xl flex items-center justify-center mb-6">
+                <Clock className="w-8 h-8 text-secondary" />
               </div>
-              <h4 className="text-xl font-bold text-white mb-4">Falta de Tiempo y Prisa</h4>
+              <h4 className="text-xl font-bold text-white mb-4">Tiempo y Dedicación</h4>
               <p className="text-gray-300 leading-relaxed">
-                "Siempre tienen prisa. No me explican bien qué me van a hacer y siento que no hay tiempo para mis dudas."
+                Asignamos el tiempo necesario para cada consulta, explicamos 
+                detalladamente cada procedimiento y resolvemos todas tus dudas.
               </p>
             </div>
           </div>
@@ -187,34 +220,45 @@ function App() {
           {/* Transition */}
           <div className="text-center">
             <div className="max-w-3xl mx-auto">
-              <h4 className="text-2xl font-bold text-white mb-4">Si te sientes identificado/a...</h4>
+              <h4 className="text-2xl font-bold text-white mb-4">Tu tranquilidad es nuestra prioridad</h4>
               <p className="text-xl text-gray-300 mb-8">
-                Es hora de conocer una forma completamente diferente de vivir tu atención dental.
+                Descubre cómo la atención dental puede ser una experiencia positiva y reconfortante.
               </p>
-              <button className="bg-accent text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-accent focus:ring-offset-2">
-                Descubre Mi Enfoque Diferente
+              <button className="bg-gold-realistic text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-gold-core focus:ring-offset-2">
+                Conoce Nuestro Enfoque
               </button>
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Solution Section - Mi Enfoque Diferente */}
-      <section id="solucion" className="breakout-full bg-white py-20 lg:py-32" role="region" aria-labelledby="solucion-title">
+      <motion.section 
+        id="solucion" 
+        className="breakout-full bg-white section-spacing relative" 
+        role="region" 
+        aria-labelledby="solucion-title"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
         <div className="max-w-7xl mx-auto px-6">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-accent-subtle px-6 py-3 rounded-full mb-6">
-              <span className="text-accent-dark font-bold text-sm uppercase tracking-wider">✨ Mi Propuesta Única</span>
+            <div className="inline-flex items-center bg-gold-subtle-bg px-6 py-3 rounded-full mb-6">
+              <Sparkles className="w-4 h-4 text-gold-dark mr-2" />
+              <span className="text-gold-dark font-bold text-sm uppercase tracking-wider">Mi Propuesta Única</span>
             </div>
             <h3 id="solucion-title" className="text-4xl lg:text-5xl font-black text-neutral-800 leading-tight tracking-tight mb-6">
               <span className="text-primary">Odontología de Luz:</span>
-              <span className="block text-neutral-700">Atención centrada en</span>
-              <span className="block text-accent">tu ser real</span>
+              <span className="block text-neutral-700">Cuidado dental integral</span>
+              <span className="block text-gold-core">con amor y profesión</span>
             </h3>
             <p className="text-xl text-neutral-700 leading-relaxed max-w-3xl mx-auto">
-              Soy <strong className="text-accent">un profesional</strong> que ha decidido cambiar completamente la forma tradicional de hacer odontología. 
-              Aquí no eres un paciente más, eres una <strong className="text-secondary">persona única</strong> con historia, miedos y sueños.
+              Somos un equipo de <strong className="text-primary">profesionales especializados</strong> comprometidos 
+              con brindar atención dental de excelencia. Combinamos <strong className="text-gold-core">tecnología avanzada</strong> 
+              con el <strong className="text-pink-primary">trato humano y cálido</strong> que cada persona merece.
             </p>
           </div>
 
@@ -224,41 +268,42 @@ function App() {
             {/* Left Content - My Story */}
             <div className="space-y-8">
               <div className="bg-secondary-subtle rounded-2xl p-8 border-l-4 border-secondary">
-                <h4 className="text-2xl font-bold text-neutral-800 mb-4">Mi Promesa Personal</h4>
+                <h4 className="text-2xl font-bold text-neutral-800 mb-4">Nuestro Compromiso</h4>
                 <p className="text-lg text-neutral-700 leading-relaxed">
-                  "Durante años trabajé en clínicas tradicionales donde todo era rapidez, números y procedimientos. 
-                  Veía cómo las personas salían más asustadas de lo que llegaban. Decidí que tenía que existir una forma mejor."
+                  "En Odontología de Luz, cada tratamiento es una oportunidad para transformar vidas. 
+                  Nos especializamos en crear experiencias positivas que fortalecen la confianza 
+                  de nuestros pacientes en el cuidado dental."
                 </p>
               </div>
               
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center text-white text-xl flex-shrink-0">
-                    👂
+                  <div className="w-12 h-12 bg-gold-realistic rounded-xl flex items-center justify-center flex-shrink-0">
+                    <User className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h5 className="text-lg font-bold text-neutral-800 mb-2">Te Escucho de Verdad</h5>
-                    <p className="text-neutral-700">Dedicamos el tiempo necesario para entender tu historia, tus miedos y tus expectativas reales.</p>
+                    <h5 className="text-lg font-bold text-neutral-800 mb-2">Evaluación Integral</h5>
+                    <p className="text-neutral-700">Realizamos un diagnóstico completo considerando tu historial, necesidades y objetivos de salud bucal.</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white text-xl flex-shrink-0">
-                    💬
+                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                    <MessageCircle className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h5 className="text-lg font-bold text-neutral-800 mb-2">Explicación Clara y Honesta</h5>
-                    <p className="text-neutral-700">Te explico todo en palabras simples. Conoces cada paso, cada costo, cada alternativa antes de decidir.</p>
+                    <h5 className="text-lg font-bold text-neutral-800 mb-2">Información Transparente</h5>
+                    <p className="text-neutral-700">Te explicamos cada tratamiento de forma clara, incluyendo opciones, tiempos y costos detallados.</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center text-white text-xl flex-shrink-0">
-                    🌟
+                  <div className="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Star className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h5 className="text-lg font-bold text-neutral-800 mb-2">Ambiente de Confianza</h5>
-                    <p className="text-neutral-700">Sin prisa, sin presión. Trabajamos a tu ritmo, respetando tus tiempos y emociones.</p>
+                    <h5 className="text-lg font-bold text-neutral-800 mb-2">Atención Personalizada</h5>
+                    <p className="text-neutral-700">Adaptamos cada tratamiento a tu ritmo y necesidades, creando un ambiente de confianza y tranquilidad.</p>
                   </div>
                 </div>
               </div>
@@ -272,13 +317,13 @@ function App() {
                 </div>
                 
                 {/* Floating Quote */}
-                <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-6 border border-gray-100 max-w-xs">
+                <div className="absolute -bottom-6 -right-6 glass-effect rounded-2xl shadow-modern p-6 max-w-xs">
                   <p className="text-sm text-neutral-700 italic mb-3">
                     "Cada persona que llega aquí es recibida con respeto, comprensión y amor genuino."
                   </p>
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center text-white text-sm">
-                      👨‍⚕️
+                    <div className="w-10 h-10 bg-gold-realistic rounded-full flex items-center justify-center">
+                      <User className="w-5 h-5 text-white" />
                     </div>
                     <div>
                       <p className="font-bold text-neutral-800 text-sm">Tu Dentista</p>
@@ -294,40 +339,43 @@ function App() {
 
           {/* What Makes Us Different */}
           <div className="bg-gray-50 rounded-3xl p-12">
-            <h4 className="text-3xl font-black text-neutral-800 text-center mb-12">¿Qué Hace Diferente a Odontología de Luz?</h4>
+            <h4 className="text-3xl font-black text-neutral-800 text-center mb-12">La Diferencia Odontología de Luz</h4>
             
             <div className="grid md:grid-cols-3 gap-8">
               
               {/* Difference 1 */}
               <div className="bg-white rounded-2xl p-8 text-center shadow-lg">
-                <div className="w-20 h-20 bg-accent rounded-2xl flex items-center justify-center text-white text-3xl mx-auto mb-6">
-                  ⏰
+                <div className="w-20 h-20 bg-gold-realistic rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <Clock className="w-10 h-10 text-white" />
                 </div>
-                <h5 className="text-xl font-bold text-neutral-800 mb-4">Tiempo Sin Prisa</h5>
+                <h5 className="text-xl font-bold text-neutral-800 mb-4">Citas Extendidas</h5>
                 <p className="text-neutral-700">
-                  Bloques de 90 minutos mínimo. Tu cita no será interrumpida y tendrás toda mi atención.
+                  Sesiones de 90 minutos para tratamientos completos y detallados, 
+                  sin apuros ni interrupciones.
                 </p>
               </div>
               
               {/* Difference 2 */}
               <div className="bg-white rounded-2xl p-8 text-center shadow-lg">
-                <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center text-white text-3xl mx-auto mb-6">
-                  💝
+                <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <Heart className="w-10 h-10 text-white" />
                 </div>
-                <h5 className="text-xl font-bold text-neutral-800 mb-4">Atención Personalizada</h5>
+                <h5 className="text-xl font-bold text-neutral-800 mb-4">Seguimiento Continuo</h5>
                 <p className="text-neutral-700">
-                  Soy yo quien te atiende siempre. Conozco tu historia y respeto tu sensibilidad única.
+                  Nuestro equipo te acompaña en todo el proceso, manteniendo un registro 
+                  detallado de tu progreso y necesidades.
                 </p>
               </div>
               
               {/* Difference 3 */}
               <div className="bg-white rounded-2xl p-8 text-center shadow-lg">
-                <div className="w-20 h-20 bg-secondary rounded-2xl flex items-center justify-center text-white text-3xl mx-auto mb-6">
-                  📋
+                <div className="w-20 h-20 bg-secondary rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <CheckCircle className="w-10 h-10 text-white" />
                 </div>
-                <h5 className="text-xl font-bold text-neutral-800 mb-4">Transparencia Total</h5>
+                <h5 className="text-xl font-bold text-neutral-800 mb-4">Tecnología Avanzada</h5>
                 <p className="text-neutral-700">
-                  Precios claros desde el inicio. Plan de tratamiento explicado paso a paso.
+                  Equipamiento de última generación para diagnósticos precisos 
+                  y tratamientos mínimamente invasivos.
                 </p>
               </div>
             </div>
@@ -335,24 +383,34 @@ function App() {
 
           {/* CTA */}
           <div className="text-center mt-16">
-            <h4 className="text-2xl font-bold text-neutral-800 mb-4">¿Listo para una experiencia dental completamente diferente?</h4>
+            <h4 className="text-2xl font-bold text-neutral-800 mb-4">Comienza tu transformación dental hoy</h4>
             <p className="text-lg text-neutral-700 mb-8 max-w-2xl mx-auto">
-              Agenda tu primera cita y descubre cómo se siente ser atendido/a como la persona única que eres.
+              Agenda tu evaluación gratuita y descubre cómo podemos ayudarte a lograr 
+              la sonrisa saludable y radiante que siempre has deseado.
             </p>
-            <button className="bg-accent text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-accent focus:ring-offset-2">
-              Reservar Mi Primera Cita
+            <button className="bg-gold-realistic text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-gold-core focus:ring-offset-2">
+              Reservar Evaluación Gratuita
             </button>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Testimonials / Social Proof Section */}
-      <section className="breakout-full bg-gray-50 py-20 lg:py-32" role="region" aria-labelledby="testimonios-title">
+      <motion.section 
+        className="breakout-full bg-gray-50 section-spacing relative" 
+        role="region" 
+        aria-labelledby="testimonios-title"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
         <div className="max-w-7xl mx-auto px-6">
           {/* Section Header */}
           <div className="text-center mb-16">
             <div className="inline-flex items-center bg-primary-subtle px-6 py-3 rounded-full mb-6">
-              <span className="text-primary font-bold text-sm uppercase tracking-wider">💝 Historias Reales</span>
+              <Heart className="w-4 h-4 text-primary mr-2" />
+              <span className="text-primary font-bold text-sm uppercase tracking-wider">Historias Reales</span>
             </div>
             <h3 id="testimonios-title" className="text-4xl lg:text-5xl font-black text-neutral-800 leading-tight tracking-tight mb-6">
               <span className="text-secondary">Así cambió</span>
@@ -381,7 +439,11 @@ function App() {
                 y por primera vez salí tranquila de una consulta dental."
               </p>
               <div className="flex items-center">
-                <span className="text-accent mr-2">⭐⭐⭐⭐⭐</span>
+                <div className="flex mr-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 text-gold-core fill-current" />
+                  ))}
+                </div>
                 <span className="text-sm text-neutral-600">Hace 2 meses</span>
               </div>
             </div>
@@ -400,7 +462,11 @@ function App() {
                 Ahora sonrío sin pena y mi autoestima cambió completamente."
               </p>
               <div className="flex items-center">
-                <span className="text-accent mr-2">⭐⭐⭐⭐⭐</span>
+                <div className="flex mr-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 text-gold-core fill-current" />
+                  ))}
+                </div>
                 <span className="text-sm text-neutral-600">Hace 1 mes</span>
               </div>
             </div>
@@ -419,7 +485,11 @@ function App() {
                 Aquí recuperé la fe en los dentistas. Trato humano y profesional al 100%."
               </p>
               <div className="flex items-center">
-                <span className="text-accent mr-2">⭐⭐⭐⭐⭐</span>
+                <div className="flex mr-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 text-gold-core fill-current" />
+                  ))}
+                </div>
                 <span className="text-sm text-neutral-600">Hace 3 semanas</span>
               </div>
             </div>
@@ -445,10 +515,19 @@ function App() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Contact Section - Conversion Focused */}
-      <section id="contacto" className="breakout-full bg-neutral-800 relative overflow-hidden py-20 lg:py-32" role="region" aria-labelledby="contacto-title">
+      <motion.section 
+        id="contacto" 
+        className="breakout-full bg-neutral-800 relative overflow-hidden section-spacing" 
+        role="region" 
+        aria-labelledby="contacto-title"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
         {/* Background Elements */}
         <div className="absolute top-20 right-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 left-20 w-72 h-72 bg-secondary/10 rounded-full blur-3xl"></div>
@@ -456,17 +535,18 @@ function App() {
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           {/* Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-accent/20 px-6 py-3 rounded-full mb-6">
-              <span className="text-accent-light font-bold text-sm uppercase tracking-wider">📞 Da el Primer Paso</span>
+            <div className="inline-flex items-center bg-gold-core/20 px-6 py-3 rounded-full mb-6">
+              <Phone className="w-4 h-4 text-gold-light mr-2" />
+              <span className="text-gold-light font-bold text-sm uppercase tracking-wider">Da el Primer Paso</span>
             </div>
             <h3 id="contacto-title" className="text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight mb-6">
-              <span className="text-secondary">Estás a solo</span>
-              <span className="block text-white">una llamada de</span>
-              <span className="block text-accent">cambiar tu vida</span>
+              <span className="text-primary">Tu sonrisa perfecta</span>
+              <span className="block text-white">está a solo</span>
+              <span className="block text-gold-core">una llamada</span>
             </h3>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              No sigas posponiendo tu bienestar. Es hora de que vivas una experiencia dental 
-              <strong className="text-accent">completamente diferente</strong>. Tu nueva sonrisa te espera.
+              Contáctanos hoy para agendar tu <strong className="text-gold-core">evaluación gratuita</strong>. 
+              Nuestro equipo está listo para acompañarte hacia una <strong className="text-pink-primary">sonrisa radiante y saludable</strong>.
             </p>
           </div>
 
@@ -476,38 +556,39 @@ function App() {
             {/* Left - Main CTA */}
             <div className="space-y-8">
               <div className="bg-white rounded-3xl p-12 text-center shadow-2xl">
-                <div className="w-24 h-24 bg-accent rounded-3xl flex items-center justify-center text-white text-4xl mx-auto mb-8">
-                  📞
+                <div className="w-24 h-24 bg-gold-realistic rounded-3xl flex items-center justify-center mx-auto mb-8">
+                  <Phone className="w-12 h-12 text-white" />
                 </div>
-                <h4 className="text-3xl font-black text-neutral-800 mb-6">Llámame Ahora</h4>
+                <h4 className="text-3xl font-black text-neutral-800 mb-6">Agenda tu Cita</h4>
                 <p className="text-lg text-neutral-700 mb-8">
-                  Hablemos personalmente. Te escucharé, resolveré tus dudas y agendaremos tu primera cita sin presiones.
+                  Contáctanos para una consulta personalizada. Resolveremos tus dudas y 
+                  diseñaremos el plan de tratamiento perfecto para ti.
                 </p>
                 
                 <div className="space-y-4 mb-8">
-                  <a href="tel:+56223456789" className="block w-full bg-accent text-white py-6 px-8 rounded-2xl text-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-accent focus:ring-offset-2 text-center">
-                    📞 +56 2 2345 6789
+                  <a href="tel:+56223456789" className="block w-full bg-gold-realistic text-white py-6 px-8 rounded-2xl text-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-gold-core focus:ring-offset-2 text-center">
+                    <Phone className="w-6 h-6 inline mr-3" />+56 2 2345 6789
                   </a>
-                  <p className="text-sm text-neutral-600">Llámame directamente - Respondo yo personalmente</p>
+                  <p className="text-sm text-neutral-600">Atención directa de nuestro equipo profesional</p>
                 </div>
                 
                 <div className="border-t border-gray-200 pt-8">
-                  <h5 className="font-bold text-neutral-800 mb-4">O si prefieres escribir:</h5>
+                  <h5 className="font-bold text-neutral-800 mb-4">Otras formas de contacto:</h5>
                   <div className="space-y-3">
                     <a href="mailto:contacto@odontologiadeluz.cl" className="block bg-primary text-white py-3 px-6 rounded-xl font-bold hover:bg-primary-dark transition-all duration-300">
-                      ✉️ contacto@odontologiadeluz.cl
+                      <Mail className="w-4 h-4 inline mr-2" />contacto@odontologiadeluz.cl
                     </a>
                     <a href="https://wa.me/56223456789" className="block bg-secondary text-white py-3 px-6 rounded-xl font-bold hover:bg-secondary-dark transition-all duration-300">
-                      📱 WhatsApp
+                      <MessageCircle className="w-4 h-4 inline mr-2" />WhatsApp
                     </a>
                   </div>
                 </div>
               </div>
               
               {/* Urgency + Guarantees */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <h5 className="text-lg font-bold text-white mb-4">⚡ ¿Es una emergencia?</h5>
-                <p className="text-gray-300 mb-4">Si tienes dolor o una urgencia dental, contáctame inmediatamente. Atiendo emergencias 24/7.</p>
+              <div className="glass-dark rounded-2xl p-6">
+                <h5 className="text-lg font-bold text-white mb-4">Emergencias Dentales</h5>
+                <p className="text-gray-300 mb-4">Para urgencias dentales, contáctanos inmediatamente. Tenemos atención de emergencia disponible.</p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <a href="tel:+56223456789" className="bg-red-600 text-white py-3 px-6 rounded-xl font-bold text-center hover:bg-red-700 transition-all duration-300">
                     Emergencia 24/7
@@ -519,10 +600,10 @@ function App() {
             {/* Right - Location & Hours */}
             <div className="space-y-8">
               {/* Location */}
-              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/20">
+              <div className="glass-dark p-8 rounded-3xl">
                 <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center text-white text-2xl mr-4">
-                    📍
+                  <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mr-4">
+                    <MapPin className="w-8 h-8 text-white" />
                   </div>
                   <div>
                     <h5 className="text-xl font-bold text-white mb-1">Ven a Conocerme</h5>
@@ -531,7 +612,7 @@ function App() {
                 </div>
                 <p className="text-gray-200 text-lg">Av. Providencia 1234<br/>Providencia, Santiago</p>
                 <div className="mt-4 p-4 bg-white/10 rounded-xl">
-                  <p className="text-sm text-gray-300">🌿 Ambiente especialmente diseñado para relajarte y sentirte cómodo/a desde que entras.</p>
+                  <p className="text-sm text-gray-300">Ambiente especialmente diseñado para relajarte y sentirte cómodo/a desde que entras.</p>
                 </div>
               </div>
               
@@ -554,13 +635,15 @@ function App() {
                 </div>
                 
                 <div className="mt-6 p-4 bg-accent-subtle rounded-xl text-center">
-                  <p className="text-accent-dark font-bold mb-1">🕰️ Citas de 90 minutos mínimo</p>
+                  <p className="text-gold-dark font-bold mb-1">
+                    <Clock className="w-4 h-4 inline mr-1" />Citas de 90 minutos mínimo
+                  </p>
                   <p className="text-sm text-neutral-700">Sin prisa, sin interrupciones</p>
                 </div>
               </div>
               
               {/* Final Social Proof */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-center">
+              <div className="glass-dark rounded-2xl p-6 text-center">
                 <div className="flex justify-center mb-4">
                   <div className="flex -space-x-2">
                     <img src="https://images.unsplash.com/photo-1494790108755-2616b612b353?w=40&h=40&fit=crop&crop=face" alt="Paciente feliz" className="w-10 h-10 rounded-full border-2 border-white" />
@@ -569,12 +652,12 @@ function App() {
                   </div>
                 </div>
                 <p className="text-white font-bold mb-1">"Mejor dentista de Santiago"</p>
-                <p className="text-gray-300 text-sm">- Dicen mis pacientes ❤️</p>
+                <p className="text-gray-300 text-sm">- Dicen mis pacientes <Heart className="w-4 h-4 inline text-pink-primary" /></p>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Footer */}
       <footer className="breakout-full bg-primary text-white py-12" role="contentinfo">
@@ -596,7 +679,7 @@ function App() {
           </div>
         </div>
       </footer>
-    </div>
+    </motion.div>
   )
 }
 

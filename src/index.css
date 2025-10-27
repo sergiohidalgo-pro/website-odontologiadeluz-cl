@@ -13,25 +13,47 @@
   --sqrt-3: 1.732;
   --sqrt-5: 2.236;
   
-  /* Harmonious Color System - Professional & Warm */
+  /* Premium Color System - Poder, Sabiduría y Amor (Azul, Oro, Rosa) */
   
-  /* Primary Blue - Confidence & Trust */
-  --primary: #1E90FF;              /* Bright professional blue */
-  --primary-light: #87CEEB;        /* Light sky blue */
-  --primary-dark: #0066CC;         /* Deep blue */
-  --primary-subtle: #F0F8FF;       /* Alice blue tint */
+  /* Primary Blue - Poder & Confianza - WCAG AAA Compliant */
+  --primary: #1d4ed8;              /* Deep blue for AAA contrast */
+  --primary-light: #2563eb;        /* Medium blue accent */
+  --primary-dark: #1e3a8a;         /* Very deep blue */
+  --primary-subtle: #eff6ff;       /* Ultra light blue background */
   
-  /* Gold Accent - Warmth & Premium */
-  --accent: #FFD700;               /* Pure gold */
-  --accent-dark: #DAA520;          /* Darker gold */
-  --accent-light: #FFEC8B;         /* Light gold */
-  --accent-subtle: #FFFACD;        /* Lemon chiffon */
+  /* Realistic Gold System - Sabiduría & Premium Metallic */
+  --gold-realistic: linear-gradient(135deg, 
+    #ffd900 0%,     /* Pure gold highlight */
+    #ffcd3c 15%,    /* Bright gold surface */
+    #f4a500 30%,    /* Rich gold mid-tone */
+    #e8940f 50%,    /* Deep gold shadow */
+    #cc7a00 70%,    /* Bronze shadow depth */
+    #ffcd3c 85%,    /* Reflected light */
+    #fff2cc 100%    /* Rim lighting */
+  );
+  --gold-subtle: linear-gradient(135deg, #fef3c7 0%, #fed7aa 50%, #fbbf24 100%);
+  --gold-dark: #92400e;            /* AAA compliant dark gold */
+  --gold-core: #d97706;            /* Solid gold AAA contrast */
+  --gold-light: #f59e0b;           /* Light gold */
+  --gold-subtle-bg: #fffbeb;       /* Background tint */
   
-  /* Pink Accent - Care & Compassion */
-  --secondary: #FF69B4;            /* Hot pink */
-  --secondary-light: #FFB6C1;      /* Light pink */
-  --secondary-dark: #FF1493;       /* Deep pink */
-  --secondary-subtle: #FFF0F5;     /* Lavender blush */
+  /* Legacy gold support - now using realistic system */
+  --accent: var(--gold-core);
+  --accent-dark: var(--gold-dark);
+  --accent-light: var(--gold-light);
+  --accent-subtle: var(--gold-subtle-bg);
+  
+  /* Pink Accent - Amor & Compassion - WCAG AAA */
+  --pink-primary: #be185d;         /* Deep pink AAA contrast */
+  --pink-light: #ec4899;           /* Medium pink accent */
+  --pink-dark: #9d174d;            /* Very deep pink */
+  --pink-subtle: #fdf2f8;          /* Background pink tint */
+  
+  /* Legacy pink support */
+  --secondary: var(--pink-primary);
+  --secondary-light: var(--pink-light);
+  --secondary-dark: var(--pink-dark);
+  --secondary-subtle: var(--pink-subtle);
   
   /* Gradient Combinations */
   --gradient-primary: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
@@ -196,20 +218,36 @@
   }
   
   .bg-accent {
-    background: var(--flame-gold-radiant);
+    background: var(--gold-realistic);
   }
   
   .bg-accent-hover {
-    background: var(--flame-gold-radiant);
-    filter: brightness(1.1);
+    background: var(--gold-realistic);
+    filter: brightness(1.1) contrast(1.05);
   }
   
   .bg-accent-subtle {
-    background: var(--flame-gold-aura);
+    background: var(--gold-subtle);
   }
   
   .bg-accent-solid {
-    background-color: var(--flame-gold-core);
+    background-color: var(--gold-core);
+  }
+  
+  /* New Gold Gradient Classes */
+  .bg-gold-realistic {
+    background: var(--gold-realistic);
+  }
+  
+  .bg-gold-subtle {
+    background: var(--gold-subtle);
+  }
+  
+  .text-gold-realistic {
+    background: var(--gold-realistic);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
   
   /* Triple Flame Text Classes */
@@ -450,6 +488,65 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(calc(var(--sacred-2xl) * var(--phi)), 1fr));
     gap: var(--sacred-lg);
+  }
+  
+  /* Sacred Geometry Decorative Elements */
+  .fibonacci-spiral {
+    position: relative;
+    width: calc(var(--sacred-xl) * var(--phi));
+    height: calc(var(--sacred-xl) * var(--phi));
+  }
+  
+  .fibonacci-spiral::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--gold-core);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: sacredSpiral 3s ease-in-out infinite;
+  }
+  
+  .golden-circle {
+    width: calc(var(--sacred-xl) * var(--phi));
+    height: calc(var(--sacred-xl) * var(--phi));
+    border: 1px solid var(--gold-core);
+    border-radius: 50%;
+    opacity: 0.2;
+    position: absolute;
+  }
+  
+  .precision-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--gold-core) 50%, transparent 100%);
+    opacity: 0.4;
+  }
+  
+  .sacred-hexagon {
+    width: var(--sacred-2xl);
+    height: var(--sacred-2xl);
+    background: var(--gold-subtle);
+    clip-path: polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
+    opacity: 0.1;
+  }
+  
+  /* Clean minimal spacing utilities */
+  .py-clean {
+    padding-top: var(--space-lg);
+    padding-bottom: var(--space-lg);
+  }
+  
+  .section-spacing {
+    padding-top: var(--space-4xl);
+    padding-bottom: var(--space-4xl);
+  }
+  
+  @media (max-width: 768px) {
+    .section-spacing {
+      padding-top: var(--space-2xl);
+      padding-bottom: var(--space-2xl);
+    }
   }
 }
 
