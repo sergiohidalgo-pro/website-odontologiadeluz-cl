@@ -178,7 +178,7 @@ function App() {
       {/* Hero Section - Problem-Focused */}
       <motion.section 
         className="breakout-full relative overflow-hidden section-spacing"
-        style={{ background: 'linear-gradient(135deg, #E8EFFE 0%, #FFFBF0 50%, #FFF0F3 100%)', paddingTop: 0,  y: textY }} 
+        style={{ background: 'linear-gradient(135deg, #E8EFFE 0%, #FFFBF0 50%, #FFF0F3 100%)', paddingTop: 30,  y: textY }} 
         role="banner"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -200,7 +200,7 @@ function App() {
                   transition={{ duration: 0.2 }}
                 >
                   <Heart className="w-4 h-4 text-primary mr-2" />
-                  <span className="text-primary-dark font-bold text-sm uppercase tracking-wider">Atención con el Corazón</span>
+                  <span className="text-primary font-bold text-sm uppercase tracking-wider">Atención con el Corazón</span>
                 </motion.div>
                 <motion.h2 
                   className="text-5xl lg:text-6xl font-black text-neutral-800 leading-tight tracking-tight mb-6"
