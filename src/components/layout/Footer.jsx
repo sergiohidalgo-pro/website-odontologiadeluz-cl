@@ -17,21 +17,6 @@ export default function Footer() {
             Cuidando tu sonrisa con amor y profesionalismo
           </p>
           
-          <div className="text-white/90 mb-6 space-y-2">
-            <p className="text-lg">
-              📍 <strong>Talagante:</strong> Av. Balmaceda 949
-            </p>
-            <p className="text-lg">
-              📍 <strong>Providencia:</strong> Av. Salvador 95 Of. 316, Santiago
-            </p>
-            <p className="text-lg">
-              📧 <a href="mailto:contacto@odontologiadeluz.cl" className="hover:text-white underline">contacto@odontologiadeluz.cl</a>
-            </p>
-            <p className="text-lg">
-              📱 <a href="tel:+56998116713" className="hover:text-white underline">+56 9 9811 6713</a>
-            </p>
-          </div>
-          
           <nav className="flex justify-center space-x-6 mb-8" aria-label="Enlaces del pie de página">
             <a 
               href="#servicios" 

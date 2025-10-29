@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion'
-import { Sparkles, CheckCircle, Phone, MessageCircle, Mail, MapPin, Clock } from 'lucide-react'
+import { Sparkles, CheckCircle, Phone, MessageCircle, Mail, MapPin, Clock, Building2, Train } from 'lucide-react'
 import { useOptimizedAnimations } from '../../hooks/useOptimizedAnimations'
 
 export default function ContactSection() {
@@ -278,38 +278,62 @@ export default function ContactSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={optimizedViewport}
             >
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center mr-3" style={{ backgroundColor: '#4169E1' }}>
-                  <MapPin className="w-6 h-6 text-white" />
+              <div className="text-center mb-8">
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: '#4169E1' }}>
+                  <MapPin className="w-8 h-8 text-white" />
                 </div>
-                <div>
-                  <h5 className="text-lg font-bold text-neutral-800">Nuestra Ubicación</h5>
-                  <p className="text-sm text-neutral-600">Fácil acceso en metro</p>
-                </div>
+                <h5 className="text-2xl font-bold text-neutral-800 mb-2">Nuestras Ubicaciones</h5>
+                <p className="text-neutral-600">Dos sucursales para atenderte mejor</p>
               </div>
-              <div className="space-y-3 mb-4">
-                <p className="text-neutral-700 font-semibold">
-                  <strong>Talagante:</strong> Av. Balmaceda 949
-                </p>
-                <div className="flex items-center gap-2">
-                  <p className="text-neutral-700 font-semibold">
-                    <strong>Providencia:</strong> Av. Salvador 95 Of. 316, Santiago
-                  </p>
-                </div>
-                <div className="flex items-center gap-2 text-sm text-neutral-600 ml-4">
-                  <img src="/src/assets/logo-metro.svg" alt="Metro" className="w-5 h-5" />
-                  <span>Metro Salvador</span>
-                </div>
-              </div>
-              <div className="space-y-2 text-sm text-neutral-600">
-                <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4" style={{ color: '#4169E1' }} />
-                  <span><strong>Lun-Vie:</strong> 9:00 - 19:00</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4" style={{ color: '#F4C542' }} />
-                  <span><strong>Sábados:</strong> 9:00 - 14:00</span>
-                </div>
+              
+              <div className="grid md:grid-cols-2 gap-4 mb-8">
+                {/* Talagante */}
+                <a
+                  href="https://maps.google.com/?q=Av.+Balmaceda+949,+Talagante"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group p-6 rounded-2xl transition-all duration-300 hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-offset-2 cursor-pointer"
+                  style={{ backgroundColor: '#E8EFFE', borderWidth: '2px', borderColor: 'transparent' }}
+                  aria-label="Ver ubicación de Talagante en Google Maps"
+                >
+                  <div className="text-center">
+                    <MapPin className="w-10 h-10 mx-auto mb-3" style={{ color: '#4169E1' }} />
+                    <p className="font-bold text-neutral-800 text-lg mb-2">Talagante</p>
+                    <p className="text-neutral-700 text-sm mb-3">Av. Balmaceda 949</p>
+                    <div className="flex items-center justify-center gap-2 text-sm font-semibold mb-4" style={{ color: '#4169E1' }}>
+                      <Building2 className="w-4 h-4" />
+                      <span>Plaza Talagante</span>
+                    </div>
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl font-semibold text-sm transition-colors" style={{ backgroundColor: '#4169E1', color: 'white' }}>
+                      <MapPin className="w-4 h-4" />
+                      Cómo llegar
+                    </div>
+                  </div>
+                </a>
+                
+                {/* Providencia */}
+                <a
+                  href="https://maps.google.com/?q=Av.+Salvador+95+Of.+316,+Providencia,+Santiago"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group p-6 rounded-2xl transition-all duration-300 hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-offset-2 cursor-pointer"
+                  style={{ backgroundColor: '#FFFBF0', borderWidth: '2px', borderColor: 'transparent' }}
+                  aria-label="Ver ubicación de Providencia en Google Maps"
+                >
+                  <div className="text-center">
+                    <MapPin className="w-10 h-10 mx-auto mb-3" style={{ color: '#F4C542' }} />
+                    <p className="font-bold text-neutral-800 text-lg mb-2">Providencia</p>
+                    <p className="text-neutral-700 text-sm mb-3">Av. Salvador 95 Of. 316</p>
+                    <div className="flex items-center justify-center gap-2 text-sm font-semibold mb-4" style={{ color: '#4169E1' }}>
+<img src="/src/assets/logo-metro.svg" alt="Metro" className="w-5 h-5" />                      
+                      <span>Metro Salvador</span>
+                    </div>
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl font-semibold text-sm transition-colors" style={{ backgroundColor: '#F4C542', color: '#1a1a1a' }}>
+                      <MapPin className="w-4 h-4" />
+                      Cómo llegar
+                    </div>
+                  </div>
+                </a>
               </div>
             </motion.div>
           </motion.div>
