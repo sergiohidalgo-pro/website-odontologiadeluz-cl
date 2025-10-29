@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://odontologiadeluz.cl/</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es-CL" href="https://odontologiadeluz.cl/" />
+    <image:image>
+      <image:loc>https://odontologiadeluz.cl/favicon/android-icon-192x192.png</image:loc>
+      <image:title>Odontología de Luz</image:title>
+      <image:caption>Clínica dental en Santiago</image:caption>
+    </image:image>
   </url>
 </urlset>
