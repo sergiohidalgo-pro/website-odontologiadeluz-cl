@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import { useFocusManagement } from './hooks/useFocusManagement'
 
-// Modular Components
+// Modular Components (that we know work)
 import LoadingScreen from './components/ui/LoadingScreen'
 import Header from './components/layout/Header'
 import HeroSection from './components/sections/HeroSection'

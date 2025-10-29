@@ -66,13 +66,13 @@ export const DesignSystem = {
   
   // Quick access to tokens
   tokens: {
-    colors,
-    typography,
-    spacing,
-    borderRadius,
-    boxShadow,
-    animation,
-    breakpoints
+    colors: designTokens.colors,
+    typography: designTokens.typography,
+    spacing: designTokens.spacing,
+    borderRadius: designTokens.borderRadius,
+    boxShadow: designTokens.boxShadow,
+    animation: designTokens.animation,
+    breakpoints: designTokens.breakpoints
   },
   
   // Theme variants
