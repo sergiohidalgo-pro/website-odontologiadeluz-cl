@@ -46,15 +46,16 @@ export default function Footer() {
               © {currentYear} Odontología de Luz. Todos los derechos reservados.
             </p>
             <p className="text-white/60 text-xs mt-3">
-              Creado con I.C. inteligencia del corazón y asistencia de IA por Sergio Hidalgo bajo la empresa{' '}
+              Creado con IC Inteligencia del Corazón 💙 y asistido por IA Claude Code manejada por Sergio Hidalgo bajo la empresa{' '}
               <a 
                 href="https://cdx.cl" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-white/90 hover:text-white underline transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-1 rounded"
               >
-                CDX - Codex SpA
-              </a>
+                CDX.cl - Codex SpA
+              </a> <br />
+              🇨🇱 Hecho en Chile - Novienbre 2025
             </p>
           </div>
         </div>
