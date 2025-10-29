@@ -1,0 +1,4 @@
+Contact: mailto:contacto@odontologiadeluz.cl
+Expires: 2025-12-31T23:59:59.000Z
+Preferred-Languages: es, en
+Canonical: https://odontologiadeluz.cl/.well-known/security.txt

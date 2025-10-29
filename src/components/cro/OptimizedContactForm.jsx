@@ -429,8 +429,8 @@ export const OptimizedContactForm = ({
           >
             <Text size="sm" color="muted">
               💬 <strong>¿Prefieres llamar?</strong> Llámanos al{' '}
-              <a href="tel:+56912345678" className="text-primary-500 font-bold hover:underline">
-                +56 9 1234 5678
+              <a href="tel:+56998116713" className="text-primary-500 font-bold hover:underline">
+                +56 9 9811 6713
               </a>
             </Text>
             <Text size="xs" color="muted" className="mt-2">

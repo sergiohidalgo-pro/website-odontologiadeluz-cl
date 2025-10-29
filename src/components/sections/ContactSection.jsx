@@ -159,17 +159,17 @@ export default function ContactSection() {
               
               <div className="space-y-4">
                 <a 
-                  href="tel:+56223456789" 
+                  href="tel:+56998116713" 
                   className="block w-full text-white py-5 px-8 rounded-2xl text-xl font-bold shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-offset-2 text-center cursor-pointer"
                   style={{ background: 'linear-gradient(135deg, #a9e159 0%, #c4ed8a 100%)' }}
                   aria-label="Llamar a Odontología de Luz para reservar cita"
                 >
                   <Phone className="w-6 h-6 inline mr-3" />
-                  Llamar Ahora: +56 2 2345 6789
+                  Llamar Ahora: +56 9 9811 6713
                 </a>
                 
                 <a 
-                  href="https://wa.me/56223456789" 
+                  href="https://wa.me/56998116713?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20hora%20para%20una%20evaluaci%C3%B3n%20dental%20completa.%20%C2%BFCu%C3%A1ndo%20tienen%20disponibilidad%3F" 
                   className="block w-full text-white py-5 px-8 rounded-2xl text-xl font-bold shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-offset-2 text-center cursor-pointer"
                   style={{ background: 'linear-gradient(135deg, #c4ed8a 0%, #d4f1a8 100%)' }}
                   target="_blank"
@@ -287,10 +287,20 @@ export default function ContactSection() {
                   <p className="text-sm text-neutral-600">Fácil acceso en metro</p>
                 </div>
               </div>
-              <p className="text-neutral-700 font-semibold mb-4">
-                Av. Providencia 1234<br/>
-                Providencia, Santiago
-              </p>
+              <div className="space-y-3 mb-4">
+                <p className="text-neutral-700 font-semibold">
+                  <strong>Talagante:</strong> Av. Balmaceda 949
+                </p>
+                <div className="flex items-center gap-2">
+                  <p className="text-neutral-700 font-semibold">
+                    <strong>Providencia:</strong> Av. Salvador 95 Of. 316, Santiago
+                  </p>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-neutral-600 ml-4">
+                  <img src="/src/assets/logo-metro.svg" alt="Metro" className="w-5 h-5" />
+                  <span>Metro Salvador</span>
+                </div>
+              </div>
               <div className="space-y-2 text-sm text-neutral-600">
                 <div className="flex items-center gap-2">
                   <Clock className="w-4 h-4" style={{ color: '#4169E1' }} />

@@ -1,0 +1,29 @@
+# humanstxt.org/
+# Los humanos detrás de este sitio
+
+/* EQUIPO */
+Desarrollador: Sergio Hidalgo
+Sitio: https://cdx.cl
+Ubicación: Santiago, Chile
+
+/* AGRADECIMIENTOS */
+Diseño y Desarrollo: CDX - Codex SpA
+Cliente: Odontología de Luz
+
+/* TECNOLOGÍA */
+Framework: React 19
+Build Tool: Vite
+Estilos: Tailwind CSS 4
+Animaciones: Framer Motion
+Servidor: Nginx
+Contenedor: Docker
+Deploy: Easypanel
+
+/* CONTACTO */
+Email: contacto@odontologiadeluz.cl
+Teléfono: +56 9 9811 6713
+Dirección Talagante: Av. Balmaceda 949, Talagante
+Dirección Providencia: Av. Salvador 95 Of. 316, Providencia, Santiago
+
+/* ÚLTIMA ACTUALIZACIÓN */
+Noviembre 2025
