@@ -36,18 +36,25 @@ export default function Footer() {
           
           <nav className="flex justify-center space-x-6 mb-8" aria-label="Enlaces del pie de página">
             <a 
-              href="#servicios" 
+              href="#problema" 
               className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 rounded px-3 py-2 cursor-pointer" 
-              aria-label="Ir a servicios"
+              aria-label="Ir a problemas dentales"
             >
-              Servicios
+              Problemas
             </a>
             <a 
-              href="#equipo" 
+              href="#solucion" 
               className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 rounded px-3 py-2 cursor-pointer" 
-              aria-label="Conocer equipo"
+              aria-label="Ver nuestra solución"
             >
-              Equipo
+              Solución
+            </a>
+            <a 
+              href="#testimonios" 
+              className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 rounded px-3 py-2 cursor-pointer" 
+              aria-label="Leer testimonios"
+            >
+              Testimonios
             </a>
             <a 
               href="#contacto" 

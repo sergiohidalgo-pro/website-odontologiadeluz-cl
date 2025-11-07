@@ -42,6 +42,7 @@ export default function TestimonialsSection() {
 
   return (
     <motion.section 
+      id="testimonios"
       className="breakout-full section-spacing relative"
       style={{ background: 'linear-gradient(135deg, #FFFCF0 0%, #FFF5F9 50%, #E8EFFE 100%)' }} 
       role="region" 
