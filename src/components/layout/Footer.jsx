@@ -20,16 +20,18 @@ export default function Footer() {
           </p>
           
           {/* Social Media */}
-          <div className="flex justify-center mb-6">
+          <div className="flex flex-col items-center mb-6">
             <a
               href="https://www.instagram.com/odontologiadeluz"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/80 hover:text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 rounded-lg p-3 hover:scale-110 hover:rotate-3 group"
-              aria-label="Seguir en Instagram"
+              className="flex items-center gap-3 text-white/80 hover:text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 rounded-lg px-4 py-3 hover:scale-105 group font-medium text-lg"
+              aria-label="Seguir en Instagram @odontologiadeluz"
             >
               <Instagram className="w-6 h-6 group-hover:drop-shadow-lg transition-all duration-300" />
+              <span className="group-hover:drop-shadow-sm transition-all duration-300">@odontologiadeluz</span>
             </a>
+            <p className="text-white/60 text-sm mt-2">¡Síguenos para ver nuestro trabajo!</p>
           </div>
           
           <nav className="flex justify-center space-x-6 mb-8" aria-label="Enlaces del pie de página">

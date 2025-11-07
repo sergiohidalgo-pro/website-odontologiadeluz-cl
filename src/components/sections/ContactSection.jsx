@@ -193,14 +193,14 @@ export default function ContactSection() {
                 
                 <a 
                   href="https://www.instagram.com/odontologiadeluz" 
-                  className="block w-full py-4 px-6 rounded-xl font-bold transition-all duration-300 text-center cursor-pointer border-2 hover:scale-105"
+                  className="block w-full py-4 px-6 rounded-xl font-bold transition-all duration-300 text-center cursor-pointer border-2 hover:scale-105 text-lg"
                   style={{ borderColor: '#c4ed8a', color: '#a9e159' }}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Seguir en Instagram a Odontología de Luz"
                 >
                   <Instagram className="w-5 h-5 inline mr-2" />
-                  @odontologiadeluz
+                  <span className="font-black">@odontologiadeluz</span>
                 </a>
               </div>
             </motion.div>

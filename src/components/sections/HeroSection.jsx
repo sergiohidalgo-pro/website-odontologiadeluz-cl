@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { Heart, Smile } from 'lucide-react'
+import { Heart, Smile, Instagram } from 'lucide-react'
 import imagenFran from '../../assets/odontologa-francisca-montecino-6.png'
 import { useOptimizedAnimations } from '../../hooks/useOptimizedAnimations'
 
@@ -173,6 +173,24 @@ export default function HeroSection() {
             </div>
           </motion.div>
         </div>
+        
+        {/* Instagram Call-to-Action */}
+        <motion.div 
+          className="flex justify-center mt-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.5 }}
+        >
+          <a
+            href="https://www.instagram.com/odontologiadeluz"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 text-neutral-600 hover:text-primary transition-all duration-300 font-medium text-lg bg-white/80 px-6 py-3 rounded-full shadow-lg hover:shadow-xl backdrop-blur-sm border border-white/30 hover:scale-105 group"
+          >
+            <Instagram className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
+            <span>Síguenos en <span className="font-black text-primary">@odontologiadeluz</span></span>
+          </a>
+        </motion.div>
       </div>
     </motion.section>
   )
