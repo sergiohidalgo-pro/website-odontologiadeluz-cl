@@ -9,26 +9,26 @@ export default function ContactSection() {
   const benefits = [
     {
       icon: CheckCircle,
-      title: "Evaluación Dental Completa",
-      description: "Revisión exhaustiva de tu salud bucal",
+      title: "Evaluación Neurodivergente",
+      description: "Revisión especializada adaptada a necesidades sensoriales y emocionales",
       color: "#4169E1"
     },
     {
       icon: CheckCircle,
-      title: "Plan Personalizado",
-      description: "Diseñado específicamente para ti",
+      title: "Plan Adaptado TEA/TDAH",
+      description: "Diseñado específicamente para niños con necesidades especiales",
       color: "#F4C542"
     },
     {
       icon: CheckCircle,
-      title: "Presupuesto Transparente",
-      description: "Sin sorpresas ni costos ocultos",
+      title: "Ambiente Sensorial",
+      description: "Entorno calmado y predecible para niños neurodivergentes",
       color: "#ffb8d0"
     },
     {
       icon: CheckCircle,
-      title: "Asesoría Profesional",
-      description: "Respuestas a todas tus dudas",
+      title: "Diplomada en Discapacidad",
+      description: "Dra. Cirujano Dentista Francisca Montecino G. diplomada en atención de pacientes en situación de discapacidad",
       color: "#4169E1"
     }
   ]
@@ -43,13 +43,11 @@ export default function ContactSection() {
     <motion.section 
       id="contacto" 
       className="breakout-full relative overflow-hidden section-spacing"
-      style={{ background: 'linear-gradient(135deg, #E8EFFE 0%, #FFFBF0 50%, #FFF0F3 100%);' }} 
+      style={{ background: 'linear-gradient(135deg, #E8EFFE 0%, #FFFBF0 50%, #FFF0F3 100%)' }} 
       role="region" 
       aria-labelledby="contacto-title"
-      variants={fadeInUp}
-      initial="hidden"
-      whileInView="visible"
-      viewport={optimizedViewport}
+      initial={{ opacity: 1 }}
+      animate={{ opacity: 1 }}
     >
       {/* Background Elements */}
       <div className="absolute top-20 right-20 w-96 h-96 rounded-full blur-3xl" style={{ background: 'radial-gradient(circle, rgba(65,105,225,0.15) 0%, transparent 70%)' }}></div>
@@ -98,7 +96,10 @@ export default function ContactSection() {
             transition={{ duration: 0.6 }}
             viewport={optimizedViewport}
           >
-            <strong style={{ color: '#F4C542' }}>Primera consulta 100% gratuita</strong> con evaluación completa y plan personalizado. 
+            <strong style={{ color: '#F4C542' }}>Primera consulta 100% gratuita</strong> con la 
+            <strong style={{ color: '#4169E1' }}>Dra. Francisca Montecino G.</strong>, diplomada en atención de pacientes en discapacidad, 
+            especialista en <strong style={{ color: '#F4C542' }}>odontología inclusiva para niños neurodivergentes, TEA, TDAH, TDA y Síndrome de Down</strong>. 
+            Atendemos <strong style={{ color: '#4169E1' }}>todas las edades</strong> en Talagante y Santiago. 
             Sin compromiso, sin costos ocultos.
           </motion.p>
           
@@ -150,11 +151,11 @@ export default function ContactSection() {
                 >
                   <Phone className="w-10 h-10 text-white" />
                 </motion.div>
-                <h4 className="text-3xl font-black mb-3" style={{ color: '#7ab83d' }}>¡Reserva Ahora!</h4>
+                <h4 className="text-3xl font-black mb-3" style={{ color: '#7ab83d' }}>¡Reserva con Especialista!</h4>
                 <p className="text-lg text-neutral-700 mb-2">
-                  <strong style={{ color: '#a9e159' }}>Primera Consulta Gratis</strong> - Valor $50.000
+                  <strong style={{ color: '#a9e159' }}>Consulta Neurodivergencia Gratis</strong> - Valor $50.000
                 </p>
-                <p className="text-sm text-neutral-600">Cupos limitados disponibles esta semana</p>
+                <p className="text-sm text-neutral-600">Especialista en odontología inclusiva neurodivergente</p>
               </div>
               
               <div className="space-y-4">
@@ -234,6 +235,7 @@ export default function ContactSection() {
               viewport={optimizedViewport}
             >
               <h4 className="text-2xl font-bold text-neutral-800 mb-6 text-center">Tu Primera Visita Incluye:</h4>
+              <p className="text-center text-neutral-600 mb-6">Atención integral para todas las edades</p>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <motion.div 

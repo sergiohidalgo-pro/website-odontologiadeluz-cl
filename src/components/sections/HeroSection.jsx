@@ -82,9 +82,11 @@ export default function HeroSection() {
               className="text-xl text-neutral-700 leading-relaxed max-w-2xl"
               variants={fadeInFromLeft}
             >
-              En Odontología de Luz entendemos que cada sonrisa cuenta una historia única. Ofrecemos 
-              <strong className="text-primary"> atención dental integral</strong> con la calidez humana que mereces, 
-              donde tu <strong className="text-gold-core">bienestar emocional</strong> es tan importante como tu salud bucal.
+              La <strong className="text-primary">Dra. Cirujano Dentista Francisca Montecino G.</strong>, diplomada en 
+              <strong className="text-gold-core">atención de pacientes en situación de discapacidad</strong>, ofrece 
+              <strong className="text-primary">odontología inclusiva</strong> especializada en 
+              <strong className="text-gold-core">niños neurodivergentes, TEA, TDAH, TDA y Síndrome de Down</strong>. 
+              También atendemos <strong className="text-primary">adultos, adultos mayores y familias</strong> en Talagante y Santiago.
             </motion.p>
             
             <motion.div 
@@ -129,7 +131,7 @@ export default function HeroSection() {
               >
                 <img 
                   src={imagenFran} 
-                  alt="Sonrisa genuina de paciente relajada y feliz" 
+                  alt="Dra. Francisca Montecino G. especialista odontología inclusiva niños neurodivergentes TEA TDAH TDA Síndrome Down Talagante Santiago" 
                   className="w-full h-full object-cover"
                   loading="eager"
                 />

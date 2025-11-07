@@ -9,15 +9,18 @@ import LoadingScreen from './components/ui/LoadingScreen'
 import Header from './components/layout/Header'
 import HeroSection from './components/sections/HeroSection'
 import ProblemsSection from './components/sections/ProblemsSection'
+import SolutionSection from './components/sections/SolutionSection'
+import TestimonialsSection from './components/sections/TestimonialsSection'
+import ContactSection from './components/sections/ContactSection'
 import Footer from './components/layout/Footer'
 
-// Lazy Components
-import { 
-  LazyTestimonialsSection, 
-  LazySolutionSection, 
-  LazyContactSection,
-  LazyWrapper 
-} from './components/lazy/LazySection'
+// Lazy Components (temporarily disabled for debugging)
+// import { 
+//   LazyTestimonialsSection, 
+//   LazySolutionSection, 
+//   LazyContactSection,
+//   LazyWrapper 
+// } from './components/lazy/LazySection'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -48,17 +51,9 @@ function App() {
         <HeroSection />
         <ProblemsSection />
         
-        <LazyWrapper fallbackHeight="800px">
-          <LazySolutionSection />
-        </LazyWrapper>
-
-        <LazyWrapper fallbackHeight="600px">
-          <LazyTestimonialsSection />
-        </LazyWrapper>
-
-        <LazyWrapper fallbackHeight="900px">
-          <LazyContactSection />
-        </LazyWrapper>
+        <SolutionSection />
+        <TestimonialsSection />
+        <ContactSection />
       </main>
 
       <Footer />

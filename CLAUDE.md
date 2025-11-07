@@ -285,3 +285,53 @@ Act as a senior UX/UI expert from Apple/Google/Meta when implementing changes:
 - **Modern CSS Features**: Container queries, CSS Grid subgrid, custom properties
 - **Accessibility First**: Build with assistive technology from the start
 - **Performance Budget**: <100kb initial bundle, <3s LCP, CLS <0.1
+
+### Git Commit Conventions
+
+**Reglas de commits (Gitmoji + Español)**
+
+Formato: `[emoji] [Descripción corta y clara en español]`
+
+**Guía de Emojis:**
+- ✨ Nueva funcionalidad
+- 🐛 Corregir bug
+- ♻️ Refactorizar sin cambiar comportamiento
+- 🔥 Eliminar código/archivos
+- 📝 Actualización o creación de documentación
+- 🚀 Deploy o preparar release
+- ✅ Agregar/mejorar tests
+- 🧪 Tests experimentales/fallidos
+- ⚡️ Mejoras de rendimiento
+- 🔒 Correcciones/mejoras de seguridad
+- 🔐 Cambios relacionados con autenticación
+- ⬆️ Actualizar dependencias
+- ⬇️ Degradar dependencias
+- 📦 Actualizar build/release/package
+- 🚚 Mover/renombrar archivos o carpetas
+- 🧩 Scripts/herramientas/configuración
+- 🛠️ Cambio menor de configuración/tooling
+- 🌐 Cambios de i18n/l10n
+- ✏️ Corrección de typos
+- ⏪️ Revertir cambios
+- 🔀 Merge de branches
+- 💄 Pulir UI/UX
+- 🧹 Limpiar código/archivos
+- 🧵 Cambios de concurrencia/hilos
+- 🛡️ Agregar validaciones extra
+- ⚰️ Eliminación de código muerto
+- 🩹 Hotfix/parche rápido
+- 🗃️ Cambios/migraciones de BD
+- 🏗️ WIP (Trabajo en progreso)
+- 🚨 Correcciones de lint/warnings
+- 📸 Snapshots de tests visuales
+- 🚧 Código temporal/incompleto
+- 🏷️ Tipos, etiquetas o cambios de nombres
+
+**IMPORTANTE - Reglas obligatorias:**
+- NUNCA agregar créditos a Claude Code, Anthropic, ni ningún asistente de IA
+- NUNCA incluir "Generated with Claude Code" o similares en los mensajes de commit
+- NUNCA añadir "Co-Authored-By: Claude" o referencias similares
+- Todo el código es revisado y supervisado por la empresa
+- Los derechos de autor pertenecen exclusivamente a la empresa y sus colaboradores humanos
+
+-----

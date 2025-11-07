@@ -296,6 +296,18 @@
     color: var(--flame-gold-deep);
   }
   
+  .text-gold-core {
+    color: var(--gold-core);
+  }
+  
+  .bg-gold-subtle-bg {
+    background-color: var(--gold-subtle-bg);
+  }
+  
+  .bg-secondary-subtle {
+    background-color: var(--secondary-subtle);
+  }
+  
   .bg-secondary {
     background-color: var(--secondary);
   }

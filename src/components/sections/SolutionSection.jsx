@@ -10,20 +10,20 @@ export default function SolutionSection() {
   const features = [
     {
       icon: User,
-      title: "Evaluación Integral",
-      description: "Realizamos un diagnóstico completo considerando tu historial, necesidades y objetivos de salud bucal.",
+      title: "Evaluación Especializada",
+      description: "Diagnóstico integral adaptado para niños neurodivergentes, considerando sus particularidades sensoriales y emocionales.",
       color: "bg-gold-realistic"
     },
     {
       icon: MessageCircle,
-      title: "Información Transparente", 
-      description: "Te explicamos cada tratamiento de forma clara, incluyendo opciones, tiempos y costos detallados.",
+      title: "Comunicación Adaptada", 
+      description: "Explicamos los tratamientos usando técnicas de comunicación específicas para TEA, TDAH, TDA y necesidades especiales.",
       color: "bg-primary"
     },
     {
       icon: Star,
-      title: "Atención Personalizada",
-      description: "Adaptamos cada tratamiento a tu ritmo y necesidades, creando un ambiente de confianza y tranquilidad.",
+      title: "Ambiente Sensorial",
+      description: "Creamos un entorno calmado y predecible, adaptado a las necesidades sensoriales de cada niño neurodivergente.",
       color: "bg-secondary"
     }
   ]
@@ -55,10 +55,8 @@ export default function SolutionSection() {
       className="breakout-full bg-white section-spacing relative" 
       role="region" 
       aria-labelledby="solucion-title"
-      variants={fadeInUp}
-      initial="hidden"
-      whileInView="visible"
-      viewport={optimizedViewport}
+      initial={{ opacity: 1 }}
+      animate={{ opacity: 1 }}
     >
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
@@ -79,9 +77,11 @@ export default function SolutionSection() {
             <span className="block text-gold-core">con amor y profesión</span>
           </h3>
           <p className="text-xl text-neutral-700 leading-relaxed max-w-3xl mx-auto">
-            Somos un equipo de <strong className="text-primary">profesionales especializados</strong> comprometidos 
-            con brindar atención dental de excelencia. Combinamos <strong className="text-gold-core">tecnología avanzada</strong> 
-            con el <strong className="text-primary">trato humano y cálido</strong> que cada persona merece.
+            La <strong className="text-primary">Dra. Francisca Montecino G.</strong>, diplomada en 
+            <strong className="text-gold-core">atención de pacientes en discapacidad</strong>, especialista en 
+            <strong className="text-primary">odontología inclusiva para niños neurodivergentes, TEA, TDAH, TDA y Síndrome de Down</strong>. 
+            También atendemos <strong className="text-gold-core">adultos, adultos mayores y familias</strong> con tecnología avanzada 
+            y trato humano especializado.
           </p>
         </motion.div>
 
@@ -97,11 +97,12 @@ export default function SolutionSection() {
             viewport={optimizedViewport}
           >
             <div className="bg-secondary-subtle rounded-2xl p-8 border-l-4 border-secondary">
-              <h4 className="text-2xl font-bold text-neutral-800 mb-4">Nuestro Compromiso</h4>
+              <h4 className="text-2xl font-bold text-neutral-800 mb-4">Diplomado en Atención de Discapacidad</h4>
               <p className="text-lg text-neutral-700 leading-relaxed">
-                "En Odontología de Luz, cada tratamiento es una oportunidad para transformar vidas. 
-                Nos especializamos en crear experiencias positivas que fortalecen la confianza 
-                de nuestros pacientes en el cuidado dental."
+                "Especialista diplomada en <strong className="text-primary">atención de pacientes en discapacidad</strong>, 
+                ofrecemos <strong className="text-gold-core">odontología inclusiva</strong> para niños neurodivergentes y 
+                <strong className="text-primary">atención integral a todas las edades</strong>. 
+                Cada persona recibe un enfoque único y respetuoso adaptado a sus necesidades."
               </p>
             </div>
             
@@ -139,7 +140,7 @@ export default function SolutionSection() {
               <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
                 <img 
                   src={imagenFran1} 
-                  alt="Dr/a de Odontología de Luz en ambiente cálido y acogedor" 
+                  alt="Dra. Francisca Montecino G. diplomada discapacidad especialista odontología inclusiva TEA TDAH TDA Síndrome Down" 
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
@@ -154,15 +155,15 @@ export default function SolutionSection() {
                 viewport={optimizedViewport}
               >
                 <p className="text-sm text-neutral-700 italic mb-3">
-                  "Cada persona que llega aquí es recibida con respeto, comprensión y amor genuino."
+                  "Cada niño con necesidades especiales merece atención dental adaptada a su mundo sensorial y emocional."
                 </p>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-gold-realistic rounded-full flex items-center justify-center">
                     <User className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <p className="font-bold text-neutral-800 text-sm">Tu Dentista</p>
-                    <p className="text-neutral-600 text-xs">Odontología de Luz</p>
+                    <p className="font-bold text-neutral-800 text-sm">Dra. Francisca Montecino G.</p>
+                    <p className="text-neutral-600 text-xs">Cirujano Dentista - Diplomada Atención Discapacidad</p>
                   </div>
                 </div>
               </motion.div>
