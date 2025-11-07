@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion'
+import { Instagram } from 'lucide-react'
 import logo from '../../assets/logo-odontologia-de-luz-100x100.png'
 
 export default function Header() {
@@ -66,6 +67,26 @@ export default function Header() {
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
             </motion.a>
           </motion.nav>
+          
+          {/* Social Media Links */}
+          <motion.div 
+            className="hidden md:flex items-center gap-4" 
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 1.2 }}
+          >
+            <motion.a
+              href="https://www.instagram.com/odontologiadeluz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-neutral-700 hover:text-accent transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 rounded-lg p-2 group"
+              whileHover={{ scale: 1.1, rotate: 5 }}
+              whileTap={{ scale: 0.95 }}
+              aria-label="Seguir en Instagram"
+            >
+              <Instagram className="w-5 h-5 group-hover:text-accent transition-colors duration-300" />
+            </motion.a>
+          </motion.div>
           
           {/* Mobile Menu Button */}
           <motion.button

@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion'
-import { Sparkles, CheckCircle, Phone, MessageCircle, Mail, MapPin, Clock, Building2, Train } from 'lucide-react'
+import { Sparkles, CheckCircle, Phone, MessageCircle, Mail, MapPin, Clock, Building2, Train, Instagram } from 'lucide-react'
 import { useOptimizedAnimations } from '../../hooks/useOptimizedAnimations'
 
 export default function ContactSection() {
@@ -189,6 +189,18 @@ export default function ContactSection() {
                 >
                   <Mail className="w-5 h-5 inline mr-2" />
                   contacto@odontologiadeluz.cl
+                </a>
+                
+                <a 
+                  href="https://www.instagram.com/odontologiadeluz" 
+                  className="block w-full py-4 px-6 rounded-xl font-bold transition-all duration-300 text-center cursor-pointer border-2 hover:scale-105"
+                  style={{ borderColor: '#c4ed8a', color: '#a9e159' }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Seguir en Instagram a Odontología de Luz"
+                >
+                  <Instagram className="w-5 h-5 inline mr-2" />
+                  @odontologiadeluz
                 </a>
               </div>
             </motion.div>

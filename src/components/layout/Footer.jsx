@@ -1,3 +1,5 @@
+import { Instagram } from 'lucide-react'
+
 export default function Footer() {
   const currentYear = new Date().getFullYear()
   
@@ -16,6 +18,19 @@ export default function Footer() {
           <p className="text-white/80 text-xl mb-6 max-w-2xl mx-auto">
             Cuidando tu sonrisa con amor y profesionalismo
           </p>
+          
+          {/* Social Media */}
+          <div className="flex justify-center mb-6">
+            <a
+              href="https://www.instagram.com/odontologiadeluz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/80 hover:text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 rounded-lg p-3 hover:scale-110 hover:rotate-3 group"
+              aria-label="Seguir en Instagram"
+            >
+              <Instagram className="w-6 h-6 group-hover:drop-shadow-lg transition-all duration-300" />
+            </a>
+          </div>
           
           <nav className="flex justify-center space-x-6 mb-8" aria-label="Enlaces del pie de página">
             <a 
