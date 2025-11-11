@@ -149,7 +149,7 @@ export const OptimizedContactForm = ({
             variants={fadeInFromLeft}
           >
             <Heading level="h2" size="h1" align="center" className="mb-4">
-              Reserva tu Consulta Gratuita
+              Reserva tu Consulta
             </Heading>
             <Text size="xl" align="center" color="muted" className="max-w-2xl mx-auto">
               Completa este formulario en menos de 2 minutos y te contactaremos para confirmar tu cita
@@ -158,7 +158,7 @@ export const OptimizedContactForm = ({
             {/* Benefits */}
             <div className="flex flex-wrap justify-center gap-6 mt-8">
               {[
-                "✅ Consulta 100% gratuita",
+                "✅ Atención personalizada",
                 "⏱️ Respuesta en menos de 2 horas",
                 "🔒 Información completamente segura"
               ].map((benefit, index) => (
@@ -409,7 +409,7 @@ export const OptimizedContactForm = ({
                       disabled={isSubmitting}
                       className="ml-auto transform hover:scale-105 transition-transform duration-200"
                     >
-                      {isSubmitting ? 'Enviando...' : '🎉 ¡Reservar Mi Consulta Gratuita!'}
+                      {isSubmitting ? 'Enviando...' : '🎉 ¡Reservar Mi Consulta!'}
                     </Button>
                   )}
                 </div>

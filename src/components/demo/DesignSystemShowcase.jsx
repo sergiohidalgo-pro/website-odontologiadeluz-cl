@@ -484,7 +484,7 @@ export const DesignSystemShowcase = () => {
           <Alert
             variant="success"
             title="Próximos pasos"
-            message="Revisa tu email para más detalles sobre tu consulta gratuita"
+            message="Revisa tu email para más detalles sobre tu consulta"
           />
           
           <div className="text-center pt-4">

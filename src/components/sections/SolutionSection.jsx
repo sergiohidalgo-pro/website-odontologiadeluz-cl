@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion'
-import { Sparkles, User, MessageCircle, Star, Clock, Heart, CheckCircle } from 'lucide-react'
+import { Sparkles, User, Award, MessageCircle, Star, Clock, Heart, CheckCircle } from 'lucide-react'
 import { useOptimizedAnimations } from '../../hooks/useOptimizedAnimations'
 import imagenFran1 from '../../assets/odontologa-francisca-montecino-2.png'
 
@@ -17,13 +17,13 @@ export default function SolutionSection() {
     {
       icon: MessageCircle,
       title: "Comunicación Adaptada", 
-      description: "Explicamos los tratamientos usando técnicas de comunicación específicas para TEA, TDAH, TDA y necesidades especiales.",
+      description: "Explicamos los tratamientos usando técnicas de comunicación específicas para TEA, TDAH, TDA y requerimientos especiales.",
       color: "bg-primary"
     },
     {
       icon: Star,
       title: "Ambiente Sensorial",
-      description: "Creamos un entorno calmado y predecible, adaptado a las necesidades sensoriales de cada niño neurodivergente.",
+      description: "Creamos un entorno calmado y predecible, adaptado a los requerimientos sensoriales de cada niño neurodivergente.",
       color: "bg-secondary"
     }
   ]
@@ -38,7 +38,7 @@ export default function SolutionSection() {
     {
       icon: Heart,
       title: "Seguimiento Continuo",
-      description: "Nuestro equipo te acompaña en todo el proceso, manteniendo un registro detallado de tu progreso y necesidades.",
+      description: "Nuestro equipo te acompaña en todo el proceso, manteniendo un registro detallado de tu progreso y requerimientos.",
       color: "#F4C542"
     },
     {
@@ -77,11 +77,7 @@ export default function SolutionSection() {
             <span className="block text-gold-core">con amor y profesión</span>
           </h3>
           <p className="text-xl text-neutral-700 leading-relaxed max-w-3xl mx-auto">
-            La <strong className="text-primary">Dra. Francisca Montecino G.</strong>, diplomada en 
-            <strong className="text-gold-core">atención de pacientes en discapacidad</strong>, especialista en 
-            <strong className="text-primary">odontología inclusiva para niños neurodivergentes, TEA, TDAH, TDA y Síndrome de Down</strong>. 
-            También atendemos <strong className="text-gold-core">adultos, adultos mayores y familias</strong> con tecnología avanzada 
-            y trato humano especializado.
+            La <strong className="text-primary">Dra. Francisca Montecino G.</strong>, diplomada en <strong className="text-gold-core">atención de pacientes en discapacidad</strong>, especialista en <strong className="text-primary">odontología inclusiva para niños neurodivergentes, TEA, TDAH, TDA y Síndrome de Down</strong>. También atendemos <strong className="text-gold-core">adultos, adultos mayores y familias</strong> con tecnología avanzada y trato humano especializado.
           </p>
         </motion.div>
 
@@ -99,10 +95,7 @@ export default function SolutionSection() {
             <div className="bg-secondary-subtle rounded-2xl p-8 border-l-4 border-secondary">
               <h4 className="text-2xl font-bold text-neutral-800 mb-4">Diplomado en Atención de Discapacidad</h4>
               <p className="text-lg text-neutral-700 leading-relaxed">
-                "Especialista diplomada en <strong className="text-primary">atención de pacientes en discapacidad</strong>, 
-                ofrecemos <strong className="text-gold-core">odontología inclusiva</strong> para niños neurodivergentes y 
-                <strong className="text-primary">atención integral a todas las edades</strong>. 
-                Cada persona recibe un enfoque único y respetuoso adaptado a sus necesidades."
+                "Especialista diplomada en <strong className="text-primary">atención de pacientes en discapacidad</strong>, ofrecemos <strong className="text-gold-core">odontología inclusiva</strong> para niños neurodivergentes y <strong className="text-primary">atención integral a todas las edades</strong>. Cada persona recibe un enfoque único y respetuoso adaptado a sus requerimientos."
               </p>
             </div>
             
@@ -147,23 +140,23 @@ export default function SolutionSection() {
               </div>
               
               {/* Floating Quote */}
-              <motion.div 
-                className="absolute -bottom-6 -right-6 glass-effect rounded-2xl shadow-modern p-6 max-w-xs"
+              <motion.div
+                className="absolute -bottom-6 -right-6 glass-effect rounded-2xl shadow-modern p-5 max-w-sm"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={optimizedViewport}
               >
-                <p className="text-sm text-neutral-700 italic mb-3">
-                  "Cada niño con necesidades especiales merece atención dental adaptada a su mundo sensorial y emocional."
+                <p className="text-sm text-neutral-700 italic mb-4 leading-relaxed">
+                  "No solo se trata de dientes, sino de ver cómo la vida de mis pacientes se transforma en cada experiencia dental."
                 </p>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gold-realistic rounded-full flex items-center justify-center">
-                    <User className="w-5 h-5 text-white" />
+                  <div className="w-12 h-12 bg-gold-realistic rounded-full flex items-center justify-center flex-shrink-0">
+                    <Award className="w-6 h-6 text-white" strokeWidth={2} />
                   </div>
-                  <div>
-                    <p className="font-bold text-neutral-800 text-sm">Dra. Francisca Montecino G.</p>
-                    <p className="text-neutral-600 text-xs">Cirujano Dentista - Diplomada Atención Discapacidad</p>
+                  <div className="flex-1">
+                    <p className="font-bold text-neutral-800 text-sm leading-tight" style={{ marginBottom: 0 }}>Dra. Francisca Montecino G.</p>
+                    <p className="text-neutral-600 text-xs leading-tight" style={{ marginBottom: 0 }}>Cirujano Dentista - Diplomada Atención Discapacidad</p>
                   </div>
                 </div>
               </motion.div>
@@ -229,7 +222,7 @@ export default function SolutionSection() {
         >
           <h4 className="text-2xl font-bold text-neutral-800 mb-4">Comienza tu transformación dental hoy</h4>
           <p className="text-lg text-neutral-700 mb-8 max-w-2xl mx-auto">
-            Agenda tu evaluación gratuita y descubre cómo podemos ayudarte a lograr 
+            Agenda tu evaluación y descubre cómo podemos ayudarte a lograr 
             la sonrisa saludable y radiante que siempre has deseado.
           </p>
           <motion.button 
@@ -237,9 +230,9 @@ export default function SolutionSection() {
             whileHover={{ scale: 1.05, y: -3 }}
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            aria-label="Reservar evaluación dental gratuita"
+            aria-label="Reservar evaluación dental"
           >
-            Reservar Evaluación Gratuita
+            Reservar Evaluación
           </motion.button>
         </motion.div>
       </div>

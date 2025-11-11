@@ -16,8 +16,8 @@ export const EnhancedHeroSection = ({
   primaryHeadline = "Transforma Tu Sonrisa",
   secondaryHeadline = "con Amor y Profesionalismo",
   subtitle = "Más de 500 pacientes han confiado en nosotros para crear sonrisas perfectas. Únete a nuestra familia y descubre la diferencia.",
-  urgencyMessage = "Consulta Gratuita - Solo por Tiempo Limitado",
-  primaryCTA = "Reservar Consulta Gratuita",
+  urgencyMessage = "Consulta Dental - Solo por Tiempo Limitado",
+  primaryCTA = "Reservar Consulta",
   secondaryCTA = "Ver Casos de Éxito",
   trustIndicators = [
     "✓ 15+ años de experiencia",
@@ -284,7 +284,7 @@ export const InformationGrid = ({
       level: "secondary",
       icon: "💝",
       title: "Atención Personalizada",
-      description: "Cada tratamiento es diseñado específicamente para tus necesidades individuales.",
+      description: "Cada tratamiento es diseñado específicamente para tus requerimientos individuales.",
       metrics: "Plan único por paciente"
     },
     {
@@ -516,7 +516,7 @@ export const ReadingFlowLayout = ({
     },
     {
       type: "action",
-      content: "Reserva tu consulta gratuita hoy y comienza tu transformación.",
+      content: "Reserva tu consulta hoy y comienza tu transformación.",
       size: "large"
     }
   ],
@@ -577,7 +577,7 @@ export const ReadingFlowLayout = ({
               size="xl"
               className="transform hover:scale-105 transition-transform duration-200"
             >
-              ¡Quiero Mi Consulta Gratuita!
+              ¡Quiero Mi Consulta!
             </Button>
           </motion.div>
         </div>

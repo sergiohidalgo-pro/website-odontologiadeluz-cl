@@ -31,7 +31,7 @@ export default function ProblemsSection() {
     {
       icon: Heart,
       title: "Atención Personalizada",
-      description: "Cada paciente recibe atención individualizada, escuchamos tus preocupaciones y adaptamos el tratamiento a tus necesidades específicas."
+      description: "Cada paciente recibe atención individualizada, escuchamos tus preocupaciones y adaptamos el tratamiento a tus requerimientos específicos."
     },
     {
       icon: Clock,

@@ -10,13 +10,13 @@ export default function ContactSection() {
     {
       icon: CheckCircle,
       title: "Evaluación Neurodivergente",
-      description: "Revisión especializada adaptada a necesidades sensoriales y emocionales",
+      description: "Revisión especializada adaptada a requerimientos sensoriales y emocionales",
       color: "#4169E1"
     },
     {
       icon: CheckCircle,
       title: "Plan Adaptado TEA/TDAH",
-      description: "Diseñado específicamente para niños con necesidades especiales",
+      description: "Diseñado específicamente para niños con requerimientos especiales",
       color: "#F4C542"
     },
     {
@@ -34,7 +34,7 @@ export default function ContactSection() {
   ]
 
   const guarantees = [
-    { icon: CheckCircle, text: "Evaluación Completa Gratis", color: "#4169E1" },
+    { icon: CheckCircle, text: "Evaluación Completa", color: "#4169E1" },
     { icon: CheckCircle, text: "Plan Personalizado", color: "#F4C542" },
     { icon: CheckCircle, text: "Sin Compromiso", color: "#ffb8d0" }
   ]
@@ -73,7 +73,7 @@ export default function ContactSection() {
           >
             <Sparkles className="w-5 h-5 mr-2" style={{ color: '#ffb8d0' }} />
             <span className="font-bold text-sm uppercase tracking-wider" style={{ color: '#4169E1' }}>
-              Oferta Especial - Evaluación Gratuita
+              Oferta Especial - Evaluación Dental
             </span>
           </motion.div>
           
@@ -96,7 +96,7 @@ export default function ContactSection() {
             transition={{ duration: 0.6 }}
             viewport={optimizedViewport}
           >
-            <strong style={{ color: '#F4C542' }}>Primera consulta 100% gratuita</strong> con la 
+            <strong style={{ color: '#F4C542' }}>Primera consulta</strong> con la 
             <strong style={{ color: '#4169E1' }}>Dra. Francisca Montecino G.</strong>, diplomada en atención de pacientes en discapacidad, 
             especialista en <strong style={{ color: '#F4C542' }}>odontología inclusiva para niños neurodivergentes, TEA, TDAH, TDA y Síndrome de Down</strong>. 
             Atendemos <strong style={{ color: '#4169E1' }}>todas las edades</strong> en Talagante y Santiago. 
@@ -153,7 +153,7 @@ export default function ContactSection() {
                 </motion.div>
                 <h4 className="text-3xl font-black mb-3" style={{ color: '#7ab83d' }}>¡Reserva con Especialista!</h4>
                 <p className="text-lg text-neutral-700 mb-2">
-                  <strong style={{ color: '#a9e159' }}>Consulta Neurodivergencia Gratis</strong> - Valor $50.000
+                  <strong style={{ color: '#a9e159' }}>Consulta Neurodivergencia</strong>
                 </p>
                 <p className="text-sm text-neutral-600">Especialista en odontología inclusiva neurodivergente</p>
               </div>
@@ -279,8 +279,8 @@ export default function ContactSection() {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={optimizedViewport}
               >
-                <p className="font-black text-2xl mb-1" style={{ color: '#4169E1' }}>Valor: $50.000</p>
-                <p className="text-lg font-bold" style={{ color: '#F4C542' }}>Hoy: ¡GRATIS!</p>
+                <p className="font-black text-2xl mb-1" style={{ color: '#4169E1' }}>Atención Especializada</p>
+                <p className="text-lg font-bold" style={{ color: '#F4C542' }}>Para Todas las Edades</p>
               </motion.div>
             </motion.div>
             

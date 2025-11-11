@@ -13,12 +13,12 @@ import { useOptimizedAnimations } from '../../hooks/useOptimizedAnimations'
 
 // Primary CTA Component with Urgency
 export const PrimaryCTA = ({
-  title = "¡Reserva Tu Consulta Gratuita Ahora!",
+  title = "¡Reserva Tu Consulta Ahora!",
   subtitle = "Únete a más de 500+ pacientes satisfechos que han transformado su sonrisa",
   urgencyText = "⏰ Solo quedan 3 cupos disponibles para esta semana",
-  buttonText = "Reservar Consulta Gratuita",
+  buttonText = "Reservar Consulta",
   trustIndicators = [
-    "✓ Consulta 100% gratuita",
+    "✓ Atención personalizada",
     "✓ Sin compromiso",
     "✓ Especialistas certificados"
   ],
@@ -252,7 +252,7 @@ export const SecondaryCTA = ({
 // Floating CTA Component
 export const FloatingCTA = ({
   isVisible = true,
-  buttonText = "¡Reserva Gratis!",
+  buttonText = "¡Reserva Ahora!",
   urgencyBadge = "Solo hoy",
   onCTAClick,
   position = 'bottom-right'
@@ -359,7 +359,7 @@ export const TrustSignalCard = ({
 
 // Urgency Banner Component
 export const UrgencyBanner = ({
-  message = "⚡ Promoción limitada: Consulta gratuita solo por hoy",
+  message = "⚡ Promoción limitada: Consulta dental especializada",
   isVisible = true,
   onClose,
   className = ''

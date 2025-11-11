@@ -582,7 +582,7 @@ export const BeforeAfterGallery = ({
                   size="lg"
                   className="transform hover:scale-105 transition-transform duration-200"
                 >
-                  Agendar Mi Consulta Gratuita
+                  Agendar Mi Consulta
                 </Button>
               </div>
             </Card>

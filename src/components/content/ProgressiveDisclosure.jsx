@@ -16,13 +16,13 @@ export const ExpandableFAQ = ({
   faqs = [
     {
       id: 1,
-      question: "¿La primera consulta es realmente gratuita?",
-      answer: "Sí, absolutamente. Ofrecemos una consulta inicial completamente gratuita donde evaluamos tu situación dental, discutimos tus necesidades y te explicamos las opciones de tratamiento disponibles. No hay letra chica ni condiciones ocultas.",
+      question: "¿Qué incluye la primera consulta?",
+      answer: "Ofrecemos una consulta inicial donde evaluamos tu situación dental, discutimos tus requerimientos y te explicamos las opciones de tratamiento disponibles. No hay letra chica ni condiciones ocultas.",
       category: "Consultas"
     },
     {
       id: 2,
-      question: "¿Qué incluye la consulta gratuita?",
+      question: "¿Qué incluye la evaluación inicial?",
       answer: "La consulta incluye: evaluación dental completa, revisión de tu historial médico, diagnóstico profesional, plan de tratamiento personalizado, explicación detallada de opciones y costos estimados. Todo sin costo para ti.",
       category: "Servicios"
     },
@@ -35,7 +35,7 @@ export const ExpandableFAQ = ({
     {
       id: 4,
       question: "¿Cuánto tiempo toma un tratamiento de ortodoncia?",
-      answer: "El tiempo varía según cada caso, pero generalmente entre 12-24 meses. En tu consulta gratuita, te daremos un timeline específico para tu situación. Usamos tecnología avanzada para reducir los tiempos de tratamiento.",
+      answer: "El tiempo varía según cada caso, pero generalmente entre 12-24 meses. En tu consulta inicial, te daremos un timeline específico para tu situación. Usamos tecnología avanzada para reducir los tiempos de tratamiento.",
       category: "Tratamientos"
     },
     {
@@ -324,7 +324,7 @@ export const TabbedContent = ({
                       size="lg"
                       className="w-full lg:w-auto"
                     >
-                      Agendar Consulta Gratuita
+                      Agendar Consulta
                     </Button>
                   </div>
                   
@@ -461,8 +461,8 @@ export const StepByStepGuide = ({
   steps = [
     {
       number: 1,
-      title: "Reserva tu Consulta Gratuita",
-      description: "Agenda tu cita a través de WhatsApp, teléfono o nuestro formulario web. Es 100% gratuita y sin compromiso.",
+      title: "Reserva tu Consulta",
+      description: "Agenda tu cita a través de WhatsApp, teléfono o nuestro formulario web. Sin compromiso.",
       icon: "📅"
     },
     {

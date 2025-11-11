@@ -78,15 +78,11 @@ export default function HeroSection() {
               </motion.h2>
             </motion.div>
             
-            <motion.p 
+            <motion.p
               className="text-xl text-neutral-700 leading-relaxed max-w-2xl"
               variants={fadeInFromLeft}
             >
-              La <strong className="text-primary">Dra. Cirujano Dentista Francisca Montecino G.</strong>, diplomada en 
-              <strong className="text-gold-core">atención de pacientes en situación de discapacidad</strong>, ofrece 
-              <strong className="text-primary">odontología inclusiva</strong> especializada en 
-              <strong className="text-gold-core">niños neurodivergentes, TEA, TDAH, TDA y Síndrome de Down</strong>. 
-              También atendemos <strong className="text-primary">adultos, adultos mayores y familias</strong> en Talagante y Santiago.
+              La <strong className="text-primary">Dra. Cirujano Dentista Francisca Montecino G.</strong>, diplomada en <strong className="text-gold-core">atención de pacientes en situación de discapacidad</strong>, ofrece <strong className="text-primary">odontología inclusiva</strong> especializada en <strong className="text-gold-core">niños neurodivergentes, TEA, TDAH, TDA y Síndrome de Down</strong>. También atendemos <strong className="text-primary">adultos, adultos mayores y familias</strong> en Talagante y Santiago.
             </motion.p>
             
             <motion.div 
@@ -98,9 +94,9 @@ export default function HeroSection() {
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ duration: 0.2 }}
-                aria-label="Reservar evaluación dental gratuita"
+                aria-label="Reservar evaluación dental"
               >
-                Reserva tu Evaluación Gratuita
+                Reserva tu Evaluación
               </motion.button>
               
               <motion.button 
