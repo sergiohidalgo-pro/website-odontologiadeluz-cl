@@ -12,18 +12,21 @@ RUN addgroup -g 1001 -S nodejs && \
 
 WORKDIR /app
 
-# Copy package files first for better caching
-COPY --chown=nodeuser:nodejs package*.json ./
+# Install pnpm globally
+RUN npm install -g pnpm@latest
 
-# Use npm ci for faster, reproducible builds
-RUN npm ci --only=production && npm cache clean --force
+# Copy package files first for better caching
+COPY --chown=nodeuser:nodejs package.json pnpm-lock.yaml ./
+
+# Install all dependencies (needed for build)
+RUN pnpm install --frozen-lockfile && pnpm store prune
 
 # Copy source code
 COPY --chown=nodeuser:nodejs . .
 
 # Build as non-root user
 USER nodeuser
-RUN npm run build
+RUN pnpm run build
 
 # Production stage
 FROM nginx:1.25-alpine
