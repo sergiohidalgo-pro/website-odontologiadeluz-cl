@@ -78,27 +78,6 @@ export const useFocusManagement = () => {
         outline-offset: 2px !important;
         border-radius: 4px !important;
       }
-      
-      /* Skip link styles */
-      .skip-link {
-        position: absolute;
-        top: -40px;
-        left: 6px;
-        background: #4169E1;
-        color: white;
-        padding: 8px;
-        z-index: 10000;
-        text-decoration: none;
-        border-radius: 4px;
-        font-weight: bold;
-        transition: top 0.3s;
-      }
-      
-      .skip-link:focus {
-        top: 6px;
-        outline: 3px solid #F4C542 !important;
-        outline-offset: 2px !important;
-      }
 
       /* Button focus states */
       button:focus,
@@ -148,25 +127,6 @@ export const useFocusManagement = () => {
   // Initialize focus management
   useEffect(() => {
     enhanceFocusStyles()
-
-    // Add skip link to document
-    const skipLink = document.createElement('a')
-    skipLink.href = '#main-content'
-    skipLink.className = 'skip-link'
-    skipLink.textContent = 'Saltar al contenido principal'
-    skipLink.onclick = (e) => {
-      e.preventDefault()
-      skipToMain()
-    }
-    document.body.insertBefore(skipLink, document.body.firstChild)
-
-    return () => {
-      // Cleanup
-      const existingSkipLink = document.querySelector('.skip-link')
-      if (existingSkipLink) {
-        existingSkipLink.remove()
-      }
-    }
   }, [])
 
   return {

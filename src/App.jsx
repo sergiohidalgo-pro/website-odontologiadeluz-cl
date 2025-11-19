@@ -2,6 +2,7 @@ import './App.css'
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
+import { MessageCircle } from 'lucide-react'
 import { useFocusManagement } from './hooks/useFocusManagement'
 
 // Modular Components (that we know work)
@@ -80,6 +81,22 @@ function App() {
       </main>
 
       <Footer />
+
+      {/* Botón flotante de WhatsApp */}
+      <motion.a
+        href="https://wa.me/56998116713?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20hora%20para%20una%20evaluaci%C3%B3n%20dental%20completa.%20%C2%BFCu%C3%A1ndo%20tienen%20disponibilidad%3F"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="whatsapp-float"
+        aria-label="Contactar por WhatsApp para agendar cita"
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ delay: 1.5, duration: 0.5, type: "spring", stiffness: 260, damping: 20 }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+      >
+        <MessageCircle className="w-7 h-7" strokeWidth={2} />
+      </motion.a>
     </motion.div>
   )
 }

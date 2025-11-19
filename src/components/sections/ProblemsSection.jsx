@@ -41,11 +41,15 @@ export default function ProblemsSection() {
   ]
 
   return (
-    <motion.section 
-      id="problema" 
-      className="breakout-full section-spacing relative overflow-hidden" 
-      style={{ background: 'linear-gradient(135deg, #C7DBFF 0%, #E8EFFE 50%, #FFB8D0 100%)' }} 
-      role="region" 
+    <motion.section
+      id="problema"
+      className="breakout-full section-spacing relative"
+      style={{
+        background: 'linear-gradient(135deg, #C7DBFF 0%, #E8EFFE 50%, #FFB8D0 100%)',
+        minHeight: '400px',
+        backgroundColor: '#E8EFFE' // Fallback color
+      }}
+      role="region"
       aria-labelledby="problema-title"
       variants={fadeInUp}
       initial="hidden"
