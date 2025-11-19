@@ -16,13 +16,17 @@ WORKDIR /app
 RUN npm install -g pnpm@latest
 
 # Copy package files first for better caching
-COPY --chown=nodeuser:nodejs package.json pnpm-lock.yaml ./
+COPY package.json pnpm-lock.yaml ./
 
 # Install all dependencies (needed for build)
 RUN pnpm install --frozen-lockfile && pnpm store prune
 
 # Copy source code
-COPY --chown=nodeuser:nodejs . .
+COPY . .
+
+# Change ownership to nodeuser and ensure write permissions
+RUN chown -R nodeuser:nodejs /app && \
+    chmod -R u+w /app
 
 # Build as non-root user
 USER nodeuser
