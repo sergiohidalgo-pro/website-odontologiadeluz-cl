@@ -869,12 +869,9 @@
     border: 0 !important;
   }
 
-  /* Focus visible for keyboard navigation */
+  /* Focus visible for keyboard navigation - Disabled per UI requirements */
   *:focus-visible {
-    outline: 3px solid #4169E1 !important;
-    outline-offset: 2px !important;
-    border-radius: 4px !important;
-    box-shadow: 0 0 0 5px rgba(65, 105, 225, 0.3) !important;
+    outline: none !important;
   }
 
   /* High contrast mode support */
@@ -975,11 +972,13 @@ body {
 /* Enhanced link accessibility */
 a {
   text-decoration: none;
-  color: inherit;
+  /* No usar color: inherit para que respete las clases de Tailwind */
 }
 
 a:hover, a:focus {
-  text-decoration: underline;
+  text-decoration: none;
+  outline: none;
+  box-shadow: none;
 }
 
 /* Skip links for keyboard navigation */
@@ -1039,6 +1038,11 @@ button {
   transition: all 0.2s ease;
 }
 
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 button:disabled {
   cursor: not-allowed;
   opacity: 0.6;
@@ -1056,5 +1060,5 @@ input, textarea, select {
 input:focus, textarea:focus, select:focus {
   border-color: #4169E1;
   outline: none;
-  box-shadow: 0 0 0 3px rgba(65, 105, 225, 0.3);
+  box-shadow: none;
 }

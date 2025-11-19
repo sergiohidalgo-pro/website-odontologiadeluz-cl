@@ -161,7 +161,7 @@ export default function ContactSection() {
               <div className="space-y-4">
                 <a 
                   href="tel:+56998116713" 
-                  className="block w-full text-white py-5 px-8 rounded-2xl text-xl font-bold shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-offset-2 text-center cursor-pointer"
+                  className="block w-full text-white py-5 px-8 rounded-2xl text-xl font-bold shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 text-center cursor-pointer"
                   style={{ background: 'linear-gradient(135deg, #a9e159 0%, #c4ed8a 100%)' }}
                   aria-label="Llamar a Odontología de Luz para reservar cita"
                 >
@@ -171,7 +171,7 @@ export default function ContactSection() {
                 
                 <a 
                   href="https://wa.me/56998116713?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20hora%20para%20una%20evaluaci%C3%B3n%20dental%20completa.%20%C2%BFCu%C3%A1ndo%20tienen%20disponibilidad%3F" 
-                  className="block w-full text-white py-5 px-8 rounded-2xl text-xl font-bold shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-offset-2 text-center cursor-pointer"
+                  className="block w-full text-white py-5 px-8 rounded-2xl text-xl font-bold shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 text-center cursor-pointer"
                   style={{ background: 'linear-gradient(135deg, #c4ed8a 0%, #d4f1a8 100%)' }}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -191,16 +191,19 @@ export default function ContactSection() {
                   contacto@odontologiadeluz.cl
                 </a>
                 
-                <a 
-                  href="https://www.instagram.com/odontologiadeluz" 
+                <a
+                  href="https://www.instagram.com/odontologiadeluz"
                   className="block w-full py-4 px-6 rounded-xl font-bold transition-all duration-300 text-center cursor-pointer border-2 hover:scale-105 text-lg"
-                  style={{ borderColor: '#c4ed8a', color: '#a9e159' }}
+                  style={{ borderColor: '#c4ed8a' }}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Seguir en Instagram a Odontología de Luz"
                 >
-                  <Instagram className="w-5 h-5 inline mr-2" />
-                  <span className="font-black">@odontologiadeluz</span>
+                  <span style={{ color: '#ffb8d0' }}>
+                    <Instagram className="w-5 h-5 inline mr-2" />
+                    Síguenos en{' '}
+                  </span>
+                  <span className="font-black" style={{ color: '#a9e159' }}>@odontologiadeluz</span>
                 </a>
               </div>
             </motion.div>
@@ -306,7 +309,7 @@ export default function ContactSection() {
                   href="https://maps.google.com/?q=Av.+Balmaceda+949,+Talagante"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group p-6 rounded-2xl transition-all duration-300 hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-offset-2 cursor-pointer"
+                  className="group p-6 rounded-2xl transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer"
                   style={{ backgroundColor: '#E8EFFE', borderWidth: '2px', borderColor: 'transparent' }}
                   aria-label="Ver ubicación de Talagante en Google Maps"
                 >
@@ -330,7 +333,7 @@ export default function ContactSection() {
                   href="https://maps.google.com/?q=Av.+Salvador+95+Of.+316,+Providencia,+Santiago"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group p-6 rounded-2xl transition-all duration-300 hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-offset-2 cursor-pointer"
+                  className="group p-6 rounded-2xl transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer"
                   style={{ backgroundColor: '#FFFBF0', borderWidth: '2px', borderColor: 'transparent' }}
                   aria-label="Ver ubicación de Providencia en Google Maps"
                 >

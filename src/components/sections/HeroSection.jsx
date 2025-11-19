@@ -89,25 +89,27 @@ export default function HeroSection() {
               className="flex flex-col sm:flex-row gap-4"
               variants={fadeInFromLeft}
             >
-              <motion.button 
-                className="group bg-gold-realistic text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-gold-core focus:ring-offset-2 cursor-pointer"
+              <motion.a
+                href="#contacto"
+                className="group bg-gold-realistic text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer inline-flex items-center justify-center"
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ duration: 0.2 }}
                 aria-label="Reservar evaluación dental"
               >
                 Reserva tu Evaluación
-              </motion.button>
-              
-              <motion.button 
-                className="group bg-white border-2 border-primary text-primary px-8 py-4 rounded-xl font-bold hover:bg-primary hover:text-white transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-primary focus:ring-offset-2 cursor-pointer"
+              </motion.a>
+
+              <motion.a
+                href="#solucion"
+                className="group bg-white border-2 border-primary text-primary px-8 py-4 rounded-xl font-bold hover:shadow-lg transition-all duration-300 cursor-pointer inline-flex items-center justify-center"
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ duration: 0.2 }}
                 aria-label="Conocer nuestro enfoque de atención dental"
               >
                 Conoce Nuestro Enfoque
-              </motion.button>
+              </motion.a>
             </motion.div>
           </motion.div>
           
@@ -181,10 +183,10 @@ export default function HeroSection() {
             href="https://www.instagram.com/odontologiadeluz"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 text-neutral-600 hover:text-primary transition-all duration-300 font-medium text-lg bg-white/80 px-6 py-3 rounded-full shadow-lg hover:shadow-xl backdrop-blur-sm border border-white/30 hover:scale-105 group"
+            className="flex items-center gap-3 transition-all duration-300 font-medium text-lg bg-white/80 px-6 py-3 rounded-full shadow-lg hover:shadow-xl backdrop-blur-sm border border-white/30 hover:scale-105 group"
           >
-            <Instagram className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
-            <span>Síguenos en <span className="font-black text-primary">@odontologiadeluz</span></span>
+            <Instagram className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" style={{ color: '#ffb8d0' }} />
+            <span style={{ color: '#ffb8d0' }}>Síguenos en <span className="font-black text-primary">@odontologiadeluz</span></span>
           </a>
         </motion.div>
       </div>

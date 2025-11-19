@@ -34,6 +34,29 @@ function App() {
     return () => clearTimeout(timer)
   }, [announceToScreenReader])
 
+  // Smooth scroll para enlaces con hash - Funciona en todos los navegadores incluido Chrome macOS
+  useEffect(() => {
+    const handleHashClick = (e) => {
+      const link = e.target.closest('a[href^="#"]')
+      if (!link) return
+
+      const targetId = link.getAttribute('href')
+      if (!targetId || targetId === '#') return
+
+      const targetElement = document.querySelector(targetId)
+      if (targetElement) {
+        e.preventDefault()
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        })
+      }
+    }
+
+    document.addEventListener('click', handleHashClick)
+    return () => document.removeEventListener('click', handleHashClick)
+  }, [])
+
   if (isLoading) {
     return <LoadingScreen />
   }

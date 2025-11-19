@@ -16,8 +16,8 @@ export default function SolutionSection() {
     },
     {
       icon: MessageCircle,
-      title: "Comunicación Adaptada", 
-      description: "Explicamos los tratamientos usando técnicas de comunicación específicas para TEA, TDAH, TDA y requerimientos especiales.",
+      title: "Comunicación con Amor",
+      description: "Nos comunicamos de forma clara y cercana, adaptándonos a tu forma única de comprender. Cada conversación es un espacio de confianza y respeto.",
       color: "bg-primary"
     },
     {
@@ -225,15 +225,16 @@ export default function SolutionSection() {
             Agenda tu evaluación y descubre cómo podemos ayudarte a lograr 
             la sonrisa saludable y radiante que siempre has deseado.
           </p>
-          <motion.button 
-            className="bg-gold-realistic text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-gold-core focus:ring-offset-2 cursor-pointer"
+          <motion.a
+            href="#contacto"
+            className="bg-gold-realistic text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer inline-flex items-center justify-center"
             whileHover={{ scale: 1.05, y: -3 }}
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.2 }}
             aria-label="Reservar evaluación dental"
           >
             Reservar Evaluación
-          </motion.button>
+          </motion.a>
         </motion.div>
       </div>
     </motion.section>

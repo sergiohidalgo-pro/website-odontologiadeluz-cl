@@ -30,37 +30,37 @@ export const Button = ({
     primary: {
       base: 'bg-primary-500 text-white border-2 border-primary-500',
       hover: 'hover:bg-primary-600 hover:border-primary-600',
-      focus: 'focus:ring-primary-500',
+      focus: '',
       disabled: 'disabled:bg-primary-300 disabled:border-primary-300'
     },
     secondary: {
       base: 'bg-gold-400 text-neutral-900 border-2 border-gold-400',
       hover: 'hover:bg-gold-500 hover:border-gold-500',
-      focus: 'focus:ring-gold-400',
+      focus: '',
       disabled: 'disabled:bg-gold-200 disabled:border-gold-200'
     },
     outline: {
       base: 'bg-transparent text-primary-500 border-2 border-primary-500',
       hover: 'hover:bg-primary-500 hover:text-white',
-      focus: 'focus:ring-primary-500',
+      focus: '',
       disabled: 'disabled:text-primary-300 disabled:border-primary-300'
     },
     ghost: {
       base: 'bg-transparent text-primary-500 border-2 border-transparent',
       hover: 'hover:bg-primary-50',
-      focus: 'focus:ring-primary-500',
+      focus: '',
       disabled: 'disabled:text-primary-300'
     },
     danger: {
       base: 'bg-red-500 text-white border-2 border-red-500',
       hover: 'hover:bg-red-600 hover:border-red-600',
-      focus: 'focus:ring-red-500',
+      focus: '',
       disabled: 'disabled:bg-red-300 disabled:border-red-300'
     },
     success: {
       base: 'bg-green-500 text-white border-2 border-green-500',
       hover: 'hover:bg-green-600 hover:border-green-600',
-      focus: 'focus:ring-green-500',
+      focus: '',
       disabled: 'disabled:bg-green-300 disabled:border-green-300'
     }
   }
@@ -101,7 +101,7 @@ export const Button = ({
     'inline-flex items-center justify-center',
     'font-semibold',
     'transition-all duration-200 ease-out',
-    'focus:outline-none focus:ring-4 focus:ring-offset-2',
+    'focus:outline-none',
     'disabled:cursor-not-allowed disabled:opacity-60',
     'relative overflow-hidden',
     currentSize.padding,

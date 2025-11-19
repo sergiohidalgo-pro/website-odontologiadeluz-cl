@@ -25,8 +25,8 @@ export default function ProblemsSection() {
     },
     {
       icon: Sparkles,
-      title: "Manejo del Dolor",
-      description: "Utilizamos técnicas avanzadas de anestesia y control del dolor para garantizar tratamientos cómodos y sin molestias."
+      title: "Comodidad",
+      description: "Trabajamos con cuidado y delicadeza para que te sientas lo más cómodo posible. Si en algún momento sientes molestia, puedes avisarnos y haremos una pausa."
     },
     {
       icon: Heart,
@@ -123,15 +123,16 @@ export default function ProblemsSection() {
             <p className="text-xl text-neutral-800 mb-8">
               Descubre cómo la atención dental puede ser una experiencia positiva y reconfortante.
             </p>
-            <motion.button 
-              className="bg-gold-realistic text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-gold-core focus:ring-offset-2 cursor-pointer"
+            <motion.a
+              href="#solucion"
+              className="bg-gold-realistic text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer inline-flex items-center justify-center"
               whileHover={{ scale: 1.05, y: -3 }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.2 }}
               aria-label="Conocer nuestro enfoque de tratamiento dental"
             >
               Conoce Nuestro Enfoque
-            </motion.button>
+            </motion.a>
           </div>
         </div>
       </div>
