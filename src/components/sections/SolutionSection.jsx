@@ -141,7 +141,7 @@ export default function SolutionSection() {
               
               {/* Floating Quote */}
               <motion.div
-                className="absolute -bottom-6 -right-6 glass-effect rounded-2xl shadow-modern p-5 max-w-sm"
+                className="hidden md:block absolute -bottom-6 -right-6 glass-effect rounded-2xl shadow-modern p-5 max-w-sm"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}

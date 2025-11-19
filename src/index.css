@@ -1096,3 +1096,61 @@ input:focus, textarea:focus, select:focus {
     right: 20px;
   }
 }
+
+/* Mobile Menu Full-Screen Overlay */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.mobile-nav-link {
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.mobile-nav-link:hover {
+  color: #cfaf55;
+  transform: scale(1.05);
+}
+
+.mobile-nav-link:active {
+  transform: scale(0.95);
+}
+
+.mobile-nav-instagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffb8d0;
+}
+
+.mobile-nav-instagram:hover {
+  color: #ff8fb8;
+}

@@ -1,10 +1,16 @@
 // eslint-disable-next-line no-unused-vars
-import { motion } from 'framer-motion'
-import { Instagram } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { useState } from 'react'
+import { Instagram, X, Menu } from 'lucide-react'
 import logo from '../../assets/logo-odontologia-de-luz-100x100.png'
 
 export default function Header() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+  const closeMobileMenu = () => setIsMobileMenuOpen(false)
+
   return (
+    <>
     <motion.header 
       className="breakout-full glass-effect sticky top-0 z-50 border-b border-white/20 shadow-modern" 
       role="banner"
@@ -100,18 +106,90 @@ export default function Header() {
           
           {/* Mobile Menu Button */}
           <motion.button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-            aria-label="Abrir menú de navegación"
+            aria-label={isMobileMenuOpen ? "Cerrar menú de navegación" : "Abrir menú de navegación"}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 1.2 }}
           >
-            <svg className="w-6 h-6 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6 text-neutral-700" />
+            ) : (
+              <Menu className="w-6 h-6 text-neutral-700" />
+            )}
           </motion.button>
         </div>
       </div>
     </motion.header>
+
+    {/* Mobile Menu Full-Screen Overlay */}
+    <AnimatePresence>
+      {isMobileMenuOpen && (
+        <motion.div
+          className="mobile-menu-overlay"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          onClick={closeMobileMenu}
+        >
+          <motion.nav
+            className="mobile-menu-content"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3, delay: 0.1 }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Mobile Navigation Links - Sin "Problemas" */}
+            <motion.a
+              href="#solucion"
+              className="mobile-nav-link"
+              onClick={closeMobileMenu}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Solución
+            </motion.a>
+
+            <motion.a
+              href="#testimonios"
+              className="mobile-nav-link"
+              onClick={closeMobileMenu}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Testimonios
+            </motion.a>
+
+            <motion.a
+              href="#contacto"
+              className="mobile-nav-link"
+              onClick={closeMobileMenu}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Contacto
+            </motion.a>
+
+            {/* Instagram Link */}
+            <motion.a
+              href="https://www.instagram.com/odontologiadeluz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mobile-nav-link mobile-nav-instagram"
+              onClick={closeMobileMenu}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Instagram className="w-6 h-6" />
+              <span>@odontologiadeluz</span>
+            </motion.a>
+          </motion.nav>
+        </motion.div>
+      )}
+    </AnimatePresence>
+    </>
   )
 }

@@ -43,7 +43,7 @@ export default function ProblemsSection() {
   return (
     <motion.section
       id="problema"
-      className="breakout-full section-spacing relative"
+      className="hidden md:block breakout-full section-spacing relative"
       style={{
         background: 'linear-gradient(135deg, #C7DBFF 0%, #E8EFFE 50%, #FFB8D0 100%)',
         minHeight: '400px',

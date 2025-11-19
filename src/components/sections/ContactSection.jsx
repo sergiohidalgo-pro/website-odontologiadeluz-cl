@@ -251,9 +251,11 @@ export default function ContactSection() {
             >
               <h4 className="text-2xl font-bold text-neutral-800 mb-6 text-center">Tu Primera Visita Incluye:</h4>
               <p className="text-center text-neutral-600 mb-6">Atención integral para todas las edades</p>
-              <div className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <motion.div 
+
+              {/* Mobile: Solo 3 benefits */}
+              <div className="md:hidden space-y-4">
+                {benefits.slice(0, 3).map((benefit, index) => (
+                  <motion.div
                     key={benefit.title}
                     className="flex items-start gap-4"
                     initial={{ opacity: 0, x: -20 }}
@@ -261,8 +263,33 @@ export default function ContactSection() {
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={optimizedViewport}
                   >
-                    <div 
-                      className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" 
+                    <div
+                      className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
+                      style={{ backgroundColor: benefit.color }}
+                    >
+                      <benefit.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h5 className="font-bold text-neutral-800 mb-1">{benefit.title}</h5>
+                      <p className="text-sm text-neutral-600">{benefit.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Desktop: Todos los benefits */}
+              <div className="hidden md:block space-y-4">
+                {benefits.map((benefit, index) => (
+                  <motion.div
+                    key={benefit.title}
+                    className="flex items-start gap-4"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={optimizedViewport}
+                  >
+                    <div
+                      className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
                       style={{ backgroundColor: benefit.color }}
                     >
                       <benefit.icon className="w-6 h-6 text-white" />

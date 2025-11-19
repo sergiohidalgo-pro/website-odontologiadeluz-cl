@@ -102,7 +102,7 @@ export default function HeroSection() {
 
               <motion.a
                 href="#solucion"
-                className="group bg-white border-2 border-primary text-primary px-8 py-4 rounded-xl font-bold hover:shadow-lg transition-all duration-300 cursor-pointer inline-flex items-center justify-center"
+                className="hidden sm:inline-flex group bg-white border-2 border-primary text-primary px-8 py-4 rounded-xl font-bold hover:shadow-lg transition-all duration-300 cursor-pointer items-center justify-center"
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ duration: 0.2 }}
@@ -136,13 +136,13 @@ export default function HeroSection() {
               </motion.div>
               
               {/* Floating Trust Card */}
-              <motion.div 
-                className="absolute -bottom-6 -left-6 glass-effect rounded-2xl shadow-modern p-6"
+              <motion.div
+                className="hidden md:block absolute -bottom-6 -left-6 glass-effect rounded-2xl shadow-modern p-6"
                 initial={{ opacity: 0, y: 20, scale: 0.8 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 0.6, delay: 3.0 }}
-                whileHover={{ 
-                  scale: 1.05, 
+                whileHover={{
+                  scale: 1.05,
                   boxShadow: "0 20px 40px rgba(0,0,0,0.15)",
                   transition: { duration: 0.2 }
                 }}
@@ -173,8 +173,8 @@ export default function HeroSection() {
         </div>
         
         {/* Instagram Call-to-Action */}
-        <motion.div 
-          className="flex justify-center mt-8"
+        <motion.div
+          className="hidden md:flex justify-center mt-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.5 }}
