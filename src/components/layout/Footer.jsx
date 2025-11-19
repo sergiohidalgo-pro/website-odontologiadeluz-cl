@@ -34,31 +34,32 @@ export default function Footer() {
             <p className="text-white/60 text-sm mt-2">¡Síguenos para ver nuestro trabajo!</p>
           </div>
           
-          <nav className="flex justify-center space-x-6 mb-8" aria-label="Enlaces del pie de página">
-            <a 
-              href="#problema" 
-              className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 rounded px-3 py-2 cursor-pointer" 
+          {/* Navigation Links - Hidden on Mobile */}
+          <nav className="hidden md:flex justify-center space-x-6 mb-8" aria-label="Enlaces del pie de página">
+            <a
+              href="#problema"
+              className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 rounded px-3 py-2 cursor-pointer"
               aria-label="Ir a problemas dentales"
             >
               Problemas
             </a>
-            <a 
-              href="#solucion" 
-              className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 rounded px-3 py-2 cursor-pointer" 
+            <a
+              href="#solucion"
+              className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 rounded px-3 py-2 cursor-pointer"
               aria-label="Ver nuestra solución"
             >
               Solución
             </a>
-            <a 
-              href="#testimonios" 
-              className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 rounded px-3 py-2 cursor-pointer" 
+            <a
+              href="#testimonios"
+              className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 rounded px-3 py-2 cursor-pointer"
               aria-label="Leer testimonios"
             >
               Testimonios
             </a>
-            <a 
-              href="#contacto" 
-              className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 rounded px-3 py-2 cursor-pointer" 
+            <a
+              href="#contacto"
+              className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 rounded px-3 py-2 cursor-pointer"
               aria-label="Información de contacto"
             >
               Contacto

@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
-import { Instagram, X, Menu } from 'lucide-react'
+import { Instagram, X, Menu, MapPin } from 'lucide-react'
 import logo from '../../assets/logo-odontologia-de-luz-100x100.png'
 
 export default function Header() {
@@ -172,6 +172,41 @@ export default function Header() {
             >
               Contacto
             </motion.a>
+
+            {/* Ubicaciones - Enlaces a Google Maps */}
+            <div className="mobile-nav-locations">
+              <p className="text-xs font-bold text-neutral-600 uppercase tracking-wider mb-1">
+                Nuestras Ubicaciones
+              </p>
+
+              <motion.a
+                href="https://maps.google.com/?q=Av.+Balmaceda+949,+Talagante"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mobile-nav-link mobile-nav-location"
+                onClick={closeMobileMenu}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                style={{ backgroundColor: 'rgba(65, 105, 225, 0.1)', color: '#4169E1' }}
+              >
+                <MapPin className="w-5 h-5" />
+                <span>Talagante - Plaza</span>
+              </motion.a>
+
+              <motion.a
+                href="https://maps.google.com/?q=Av.+Salvador+95+Of.+316,+Providencia,+Santiago"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mobile-nav-link mobile-nav-location"
+                onClick={closeMobileMenu}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                style={{ backgroundColor: 'rgba(244, 197, 66, 0.1)', color: '#F4C542' }}
+              >
+                <MapPin className="w-5 h-5" />
+                <span>Providencia - Metro Salvador</span>
+              </motion.a>
+            </div>
 
             {/* Instagram Link */}
             <motion.a

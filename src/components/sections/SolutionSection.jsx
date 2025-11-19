@@ -1,11 +1,41 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion'
-import { Sparkles, User, Award, MessageCircle, Star, Clock, Heart, CheckCircle } from 'lucide-react'
+import { Sparkles, User, Award, MessageCircle, Star, Clock, Heart, CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react'
 import { useOptimizedAnimations } from '../../hooks/useOptimizedAnimations'
 import imagenFran1 from '../../assets/odontologa-francisca-montecino-2.png'
+import useEmblaCarousel from 'embla-carousel-react'
+import { useCallback, useEffect, useState } from 'react'
 
 export default function SolutionSection() {
   const { fadeInUp, optimizedViewport } = useOptimizedAnimations()
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'center' })
+  const [selectedIndex, setSelectedIndex] = useState(0)
+  const [scrollSnaps, setScrollSnaps] = useState([])
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev()
+  }, [emblaApi])
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext()
+  }, [emblaApi])
+
+  const scrollTo = useCallback((index) => {
+    if (emblaApi) emblaApi.scrollTo(index)
+  }, [emblaApi])
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return
+    setSelectedIndex(emblaApi.selectedScrollSnap())
+  }, [emblaApi])
+
+  useEffect(() => {
+    if (!emblaApi) return
+    onSelect()
+    setScrollSnaps(emblaApi.scrollSnapList())
+    emblaApi.on('select', onSelect)
+    emblaApi.on('reInit', onSelect)
+  }, [emblaApi, onSelect])
 
   const features = [
     {
@@ -48,6 +78,23 @@ export default function SolutionSection() {
       color: "#ffb8d0"
     }
   ]
+
+  const DifferenceCard = ({ difference }) => (
+    <div className="bg-white rounded-2xl p-8 text-center shadow-lg h-full">
+      <motion.div
+        className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6"
+        style={{ backgroundColor: difference.color }}
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        viewport={optimizedViewport}
+      >
+        <difference.icon className="w-10 h-10 text-white" />
+      </motion.div>
+      <h5 className="text-xl font-bold text-neutral-800 mb-4">{difference.title}</h5>
+      <p className="text-neutral-700">{difference.description}</p>
+    </div>
+  )
 
   return (
     <motion.section 
@@ -167,15 +214,15 @@ export default function SolutionSection() {
         </div>
 
         {/* What Makes Us Different */}
-        <motion.div 
-          className="rounded-3xl p-12" 
+        <motion.div
+          className="rounded-3xl p-12"
           style={{ background: 'linear-gradient(135deg, #E3EDFF 0%, #C7DBFF 50%, #FFB8D0 100%)' }}
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
           viewport={optimizedViewport}
         >
-          <motion.h4 
+          <motion.h4
             className="text-3xl font-black text-neutral-800 text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -184,29 +231,61 @@ export default function SolutionSection() {
           >
             La Diferencia Odontología de Luz
           </motion.h4>
-          
-          <div className="grid md:grid-cols-3 gap-8">
+
+          {/* Mobile: Carrusel */}
+          <div className="md:hidden">
+            <div className="embla" ref={emblaRef}>
+              <div className="embla__container">
+                {differences.map((difference) => (
+                  <div className="embla__slide" key={difference.title}>
+                    <DifferenceCard difference={difference} />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Controles */}
+            <div className="flex items-center justify-center gap-4 mt-6">
+              <button
+                className="embla__button embla__button--prev"
+                onClick={scrollPrev}
+                aria-label="Diferencia anterior"
+              >
+                <ChevronLeft className="w-6 h-6" />
+              </button>
+
+              <div className="embla__dots">
+                {scrollSnaps.map((_, index) => (
+                  <button
+                    key={index}
+                    className={`embla__dot ${index === selectedIndex ? 'embla__dot--selected' : ''}`}
+                    onClick={() => scrollTo(index)}
+                    aria-label={`Ir a diferencia ${index + 1}`}
+                  />
+                ))}
+              </div>
+
+              <button
+                className="embla__button embla__button--next"
+                onClick={scrollNext}
+                aria-label="Diferencia siguiente"
+              >
+                <ChevronRight className="w-6 h-6" />
+              </button>
+            </div>
+          </div>
+
+          {/* Desktop: Grid */}
+          <div className="hidden md:grid md:grid-cols-3 gap-8">
             {differences.map((difference, index) => (
-              <motion.div 
+              <motion.div
                 key={difference.title}
-                className="bg-white rounded-2xl p-8 text-center shadow-lg"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={optimizedViewport}
               >
-                <motion.div 
-                  className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6" 
-                  style={{ backgroundColor: difference.color }}
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-                  viewport={optimizedViewport}
-                >
-                  <difference.icon className="w-10 h-10 text-white" />
-                </motion.div>
-                <h5 className="text-xl font-bold text-neutral-800 mb-4">{difference.title}</h5>
-                <p className="text-neutral-700">{difference.description}</p>
+                <DifferenceCard difference={difference} />
               </motion.div>
             ))}
           </div>
