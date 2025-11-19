@@ -84,7 +84,7 @@ LABEL maintainer="CDX - Codex SpA <contacto@cdx.cl>" \
 
 # Enhanced healthcheck
 HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
-  CMD curl -f http://localhost/ || exit 1
+  CMD curl -f http://localhost:8080/ || exit 1
 
 # Run as non-root user
 USER nginx
@@ -92,6 +92,6 @@ USER nginx
 # Use dumb-init to handle signals properly
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
 
-EXPOSE 80
+EXPOSE 8080
 
 CMD ["nginx", "-g", "daemon off; pid /tmp/nginx/nginx.pid;"]
