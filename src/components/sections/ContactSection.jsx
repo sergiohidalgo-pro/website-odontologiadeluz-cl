@@ -342,7 +342,7 @@ export default function ContactSection() {
                     <p className="font-bold text-neutral-800 text-lg mb-2">Providencia</p>
                     <p className="text-neutral-700 text-sm mb-3">Av. Salvador 95 Of. 316</p>
                     <div className="flex items-center justify-center gap-2 text-sm font-semibold mb-4" style={{ color: '#4169E1' }}>
-<img src="/src/assets/logo-metro.svg" alt="Metro" className="w-5 h-5" />                      
+                      <img src="/logo-metro.svg" alt="Metro" className="w-5 h-5" />
                       <span>Metro Salvador</span>
                     </div>
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl font-semibold text-sm transition-colors" style={{ backgroundColor: '#F4C542', color: '#1a1a1a' }}>
