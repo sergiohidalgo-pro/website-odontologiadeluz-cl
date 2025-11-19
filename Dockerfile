@@ -35,63 +35,27 @@ RUN pnpm run build
 # Production stage
 FROM nginx:1.25-alpine
 
-# Security: Update packages and install security tools
-RUN apk update && apk upgrade && \
-    apk add --no-cache \
-        dumb-init \
-        curl \
-        ca-certificates && \
-    rm -rf /var/cache/apk/* && \
-    # Remove default nginx user and create custom one
-    deluser nginx && \
-    addgroup -g 101 -S nginx && \
-    adduser -S -D -H -u 101 -h /var/cache/nginx -s /sbin/nologin -G nginx -g nginx nginx
-
-# Create required directories with proper permissions
-RUN mkdir -p /var/cache/nginx/client_temp \
-             /var/cache/nginx/proxy_temp \
-             /var/cache/nginx/fastcgi_temp \
-             /var/cache/nginx/uwsgi_temp \
-             /var/cache/nginx/scgi_temp \
-             /tmp/nginx && \
-    chown -R nginx:nginx /var/cache/nginx && \
-    chown -R nginx:nginx /etc/nginx && \
-    chown -R nginx:nginx /var/log/nginx && \
-    chown -R nginx:nginx /tmp/nginx && \
-    # Give nginx user write permission to /var/run for PID file
-    touch /var/run/nginx.pid && \
-    chown -R nginx:nginx /var/run/nginx.pid
+# Install curl for healthcheck
+RUN apk add --no-cache curl
 
 # Copy built assets from builder
-COPY --from=builder --chown=nginx:nginx /app/dist /usr/share/nginx/html
+COPY --from=builder /app/dist /usr/share/nginx/html
 
 # Copy nginx configuration
-COPY --chown=nginx:nginx nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Copy security.txt to be accessible via /.well-known/security.txt
-COPY --chown=nginx:nginx public/security.txt /usr/share/nginx/html/security.txt
-
-# Set proper permissions
-RUN chown -R nginx:nginx /usr/share/nginx/html && \
-    chmod -R 755 /usr/share/nginx/html
+# Copy security.txt
+COPY public/security.txt /usr/share/nginx/html/security.txt
 
 # Security labels
 LABEL maintainer="CDX - Codex SpA <contacto@cdx.cl>" \
-      description="Odontología de Luz - Secure Dental Clinic Website" \
-      version="2025.1" \
-      security.scan="enabled" \
-      security.non-root="true"
+      description="Odontología de Luz - Dental Clinic Website" \
+      version="2025.1"
 
-# Enhanced healthcheck
-HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
+# Healthcheck
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
   CMD curl -f http://localhost:8080/ || exit 1
-
-# Run as non-root user
-USER nginx
-
-# Use dumb-init to handle signals properly
-ENTRYPOINT ["/usr/bin/dumb-init", "--"]
 
 EXPOSE 8080
 
-CMD ["nginx", "-g", "daemon off; pid /tmp/nginx/nginx.pid;"]
+CMD ["nginx", "-g", "daemon off;"]
