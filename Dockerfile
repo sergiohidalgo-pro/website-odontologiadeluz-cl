@@ -52,10 +52,15 @@ RUN mkdir -p /var/cache/nginx/client_temp \
              /var/cache/nginx/proxy_temp \
              /var/cache/nginx/fastcgi_temp \
              /var/cache/nginx/uwsgi_temp \
-             /var/cache/nginx/scgi_temp && \
+             /var/cache/nginx/scgi_temp \
+             /tmp/nginx && \
     chown -R nginx:nginx /var/cache/nginx && \
     chown -R nginx:nginx /etc/nginx && \
-    chown -R nginx:nginx /var/log/nginx
+    chown -R nginx:nginx /var/log/nginx && \
+    chown -R nginx:nginx /tmp/nginx && \
+    # Give nginx user write permission to /var/run for PID file
+    touch /var/run/nginx.pid && \
+    chown -R nginx:nginx /var/run/nginx.pid
 
 # Copy built assets from builder
 COPY --from=builder --chown=nginx:nginx /app/dist /usr/share/nginx/html
@@ -89,4 +94,4 @@ ENTRYPOINT ["/usr/bin/dumb-init", "--"]
 
 EXPOSE 80
 
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["nginx", "-g", "daemon off; pid /tmp/nginx/nginx.pid;"]
